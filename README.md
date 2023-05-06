@@ -1,5 +1,4 @@
 ## Good Ideas:
-
 https://github.com/LazyVim/LazyVim
 
 https://github.com/NvChad/NvChad
