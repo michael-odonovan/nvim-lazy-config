@@ -1,5 +1,6 @@
 
 local M = {}
+
 local opt = vim.opt
 
 vim.cmd('filetype plugin indent on')
@@ -57,5 +58,6 @@ vim.o.confirm = true -- Confirm to save changes before exiting modified buffer
 -- vim.o.grepprg = "rg --vimgrep"
 -- vim.o.splitbelow = true -- Put new windows below current
 -- vim.o.splitright = true -- Put new windows right of current
+
 return M
 
