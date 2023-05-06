@@ -102,4 +102,8 @@ map('n', '<leader>sb', builtin.buffers, { desc = '[b] Find existing buffers sear
 map('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp search' })
 map('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostic search' })
 
+-- lazygit in a floating window
+vim.keymap.set("n", "<leader>l", [[:LazyGit<CR>]], {desc = '[l]azygit'})
+vim.g.lazygit_floating_window_scaling_factor = 1
+
 return M
