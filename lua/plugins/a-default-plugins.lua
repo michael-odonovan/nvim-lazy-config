@@ -22,6 +22,10 @@ return {
   },
 
 
+  -- Undo Tree
+  { "mbbill/undotree" },
+
+
   ----------------------------
   ----    keepers         ----
   ----------------------------
@@ -30,6 +34,7 @@ return {
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb', -- :GBrowse
   'kdheepak/lazygit.nvim',
+
 
   { -- Colorscheme
     "catppuccin/nvim",
@@ -41,12 +46,12 @@ return {
   },
 
 
-
-  {
+  { -- Telescope
     'nvim-telescope/telescope.nvim',
     version = '*',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+
 
   {
     'norcalli/nvim-colorizer.lua',
@@ -82,7 +87,7 @@ return {
   },
 
   -- <C-y,> real quick
-	{ "mattn/emmet-vim" },
+  { "mattn/emmet-vim" },
 
   -- makes it able to to repeat vim-surround functions
   { "tpope/vim-repeat", event = "VeryLazy" },
@@ -104,8 +109,6 @@ return {
   },
 
   { "theprimeagen/harpoon" },
-
-  { "mbbill/undotree" },
 
   { "L3MON4D3/LuaSnip",
   -- require("luasnip.loaders.from_vscode").load({
