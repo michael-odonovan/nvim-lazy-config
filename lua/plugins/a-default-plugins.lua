@@ -14,9 +14,15 @@ return {
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
+        theme = 'catppuccin',
+      },
+      sections = {
+        lualine_a = {'branch'},
+        lualine_b = {{ 'filename', path = 1 }},
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {}
       },
     },
   },

@@ -1,90 +1,108 @@
 local M = {}
-local vo = vim.opt
-local vg = vim.g
+
+
+-----------------------------------
+--	not sure                 --
+-----------------------------------
+
+-- vim.o.statusline = "%!luaeval('status_line()')"
+
+-- indents
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true -- convert tabs to spaces
+vim.o.smartindent = true
+
+-- deal with @ in file names
+-- vim.o.isfname:append("@-@")
+
+-- vim.o.whichwrap:append {
+--   ['<'] = true,
+--   ['>'] = true,
+--   ['['] = true,
+--   [']'] = true,
+--   h = true,
+--   l = true,
+-- }
+
+-----------------------------------
+--	settled                  --
+-----------------------------------
+-- netrw
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
+
+-- fixes gx open files functionality in netrw
+vim.g.netrw_browsex_viewer="open"
 
 -- vim.cmd[[colorscheme tokyonight]]
 vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme onedark]]
 
--- netrw
-vg.netrw_browse_split = 0
-vg.netrw_banner = 0
-vg.netrw_winsize = 25
 
-vg.mapleader = " "
+-- Make line numbers default
+vim.wo.number = true
 
--- fixes gx open files functionality
-vg.netrw_browsex_viewer="open"
+-- Make relative line numbers default
+vim.o.relativenumber = true
 
-vo.cmdheight=1
+-- Enable mouse mode
+vim.o.mouse = 'a'
 
-vo.statusline = "%!luaeval('status_line()')"
+-- Sync clipboard between OS and Neovim.
+vim.o.clipboard = 'unnamedplus'
 
-vo.splitbelow = true
+-- Enable break indent
+vim.o.breakindent = true
 
-vo.background = "dark"
+-- Save undo history
+vim.o.undofile = true
+vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
-vo.number = true
-vo.relativenumber = true
+-- Searching 
+-- case insensitive searching
+vim.o.ignorecase = true
+-- unless capital in search
+vim.o.smartcase = true
+-- Set highlight on search
+vim.o.hlsearch = false
+vim.o.incsearch = true
 
-vo.clipboard = "unnamedplus"
+-- Keep signcolumn on by default
+vim.wo.signcolumn = 'yes'
 
-vo.tabstop = 2
-vo.softtabstop = 2
-vo.shiftwidth = 2
-vo.expandtab = true -- convert tabs to spaces
+-- Decrease update time
+vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 300
 
-vo.smartindent = true
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
 
-vo.wrap = true
+-- NOTE: You should make sure your terminal supports this
+vim.o.termguicolors = true
 
-vo.swapfile = false
-vo.backup = false
-vo.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vo.undofile = true
+vim.o.splitbelow = true
 
-vo.hlsearch = false
-vo.incsearch = true
+vim.o.wrap = true
 
-vo.termguicolors = true
+vim.o.swapfile = false
+vim.o.backup = false
 
 -- scrolling space
-vo.scrolloff = 8
-
-vo.updatetime = 50
-
--- allow the mouse to be used all modes
-vo.mouse = "a"
-
-vo.clipboard = "unnamedplus"
-
-vo.ignorecase = true
-vo.smartcase = true
+vim.o.scrolloff = 8
 
 -- remove -- INSERT -- mode stuff from status
-vo.showmode = false
+vim.o.showmode = false
 
 -- highlight the current line
-vo.cursorline = true
--- always show the sign column, otherwise it would shift the text each time
-vo.signcolumn = "yes"
+vim.o.cursorline = true
 
--- deal with @ in file names
-vo.isfname:append("@-@")
-
-vo.updatetime = 50
-
-vo.whichwrap:append {
-  ['<'] = true,
-  ['>'] = true,
-  ['['] = true,
-  [']'] = true,
-  h = true,
-  l = true,
-}
 
 -- markdown
-vg.markdown_fenced_languages = {
+vim.g.markdown_fenced_languages = {
 	"html",
 	"xml",
 	"python",
