@@ -99,9 +99,11 @@ return {
   { "theprimeagen/harpoon" },
 
   { "L3MON4D3/LuaSnip",
-  -- require("luasnip.loaders.from_vscode").load({
-    -- paths = { "~/.config/nvim/snippets" }
-  -- })
+    config = function ()
+      require("luasnip.loaders.from_vscode").load({
+        paths = { "~/.config/nvim/snippets" }
+      })
+    end
   }
 
 }
