@@ -1,3 +1,5 @@
+local M = {}
+
 function my_statusline()
   local branch = vim.fn.FugitiveHead()
 
@@ -9,3 +11,5 @@ function my_statusline()
 end
 
 vim.cmd[[ set statusline=%!luaeval('my_statusline()') ]]
+
+return {}
