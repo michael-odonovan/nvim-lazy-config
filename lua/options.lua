@@ -5,8 +5,6 @@ local M = {}
 --	not sure                 --
 -----------------------------------
 
--- vim.o.statusline = "%!luaeval('status_line()')"
-
 -- indents
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
@@ -94,12 +92,8 @@ vim.o.backup = false
 -- scrolling space
 vim.o.scrolloff = 8
 
--- remove -- INSERT -- mode stuff from status
-vim.o.showmode = false
-
 -- highlight the current line
 vim.o.cursorline = true
-
 
 -- markdown
 vim.g.markdown_fenced_languages = {
