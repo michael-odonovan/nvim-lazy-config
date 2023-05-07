@@ -1,0 +1,54 @@
+{
+  "import hero-image": {
+    "prefix": "ihero",
+    "body": [
+      "import HeroImage from '../components/hero-image'",
+      "import HeroText from '../components/hero-text'",
+      "import HeroTint from '../components/hero-tint'",
+      "import HeroBorder from '../components/hero-border'"
+    ],
+    "description": ""
+  },
+  "Import Component": {
+    "prefix": "ic",
+    "body": [
+      "import ${1} from '${2}/${1}';"
+    ],
+    "description": "import component from within project"
+  },
+  "Import Styled Components": {
+    "prefix": "isc",
+    "body": [
+      "import styled from 'styled-components';"
+    ],
+    "description": "import styled"
+  },
+  "Import useState": {
+    "prefix": "ius",
+    "body": [
+      "import { useState } from 'react';"
+    ],
+    "description": "import useState"
+  },
+  "Import useEffect": {
+    "prefix": "iue",
+    "body": [
+      "import { useEffect } from 'react';"
+    ],
+    "description": "import useEffect"
+  },
+  "Import useState & useEffect": {
+    "prefix": "iuse",
+    "body": [
+      "import { useState, useEffect } from 'react';"
+    ],
+    "description": "import useState & useEffect"
+  },
+  "Import Image from Next": {
+    "prefix": "iI",
+    "body": [
+      "import Image from 'next/image';"
+    ],
+    "description": "import Image"
+  }
+}

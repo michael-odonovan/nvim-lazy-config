@@ -1,0 +1,73 @@
+{
+  "Styled Component": {
+    "prefix": "sc",
+    "body": [
+      "const ${1} = styled.div`",
+      "  ${2}",
+      "`;"
+    ],
+    "description": "Styled Component"
+  },
+  "Hero Image Component": {
+    "prefix": "hero",
+    "body": [
+      "<HeroImage",
+      "  heightMobile=\"80vw\"",
+      "  heightDesktop=\"70vw\"",
+      "  breakPoint=\"600px\"",
+      "  src=\"/${1}.jpg\"",
+      "  alt=\"${2}\"",
+      "  objectPositionMobile=\"50%\"",
+      ">",
+      "  <HeroTint></HeroTint>",
+      "  <HeroBorder></HeroBorder>",
+      "  <HeroText>${3}</HeroText>",
+      "</HeroImage>"
+    ],
+    "description": ""
+  },
+  "Styled Component Hero Text": {
+    "prefix": "hero text",
+    "body": [
+      "const HeroText = styled.h1`",
+      "  z-index: 100;",
+      "  color: var(--white);",
+      "  grid-row: 9;",
+      "  grid-column: 21;",
+      "  font-size: calc(12px + 3.5vw);",
+      "  font-family: Montserrat;",
+      "  letter-spacing: 0.1em;",
+      "  text-align: center;",
+      "`;"
+    ],
+    "description": "Styled Component Hero Text"
+  },
+  "HeroTint Styled Component": {
+    "prefix": "hero tint",
+    "body": [
+      "const HeroTint = styled.div`",
+      "  grid-row: 1 / 25;",
+      "  grid-column: 1 / 25;",
+      "  background: green;",
+      "  opacity: 0.5;",
+      "`;",
+      "<HeroTint></HeroTint>"
+    ],
+    "description": "HeroTint Styled Component"
+  },
+  "HeroBorder": {
+    "prefix": "hero border",
+    "body": [
+      "const HeroBorder = styled.div`",
+      "  z-index: 50;",
+      "  grid-row: 3 / 23;",
+      "  grid-column: 3 / 23;",
+      "  border-radius: 20px;",
+      "  border: 3px solid var(--white);",
+      "  padding: 20%;",
+      "`;",
+      ""
+    ],
+    "description": "hero border"
+  }
+}

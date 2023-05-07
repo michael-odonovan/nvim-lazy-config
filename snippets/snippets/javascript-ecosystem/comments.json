@@ -1,0 +1,13 @@
+{
+  "fancy comment": {
+    "prefix": "com",
+    "body": [
+      "/**",
+      " * ${1}",
+      " */",
+      ""
+    ],
+    "description": "fancy comment"
+  }
+}
+

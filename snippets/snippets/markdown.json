@@ -1,0 +1,23 @@
+{
+  "planning": {
+    "prefix": "planning",
+    "body": [
+      "# IN PROGRESS",
+      "- [ ] ${1}",
+      "",
+      "### FOR DEVELOPMENT",
+      "- [ ] ",
+      "",
+      "#### BACKLOG",
+      "- [ ] ",
+      "",
+      "#### RECURRING",
+      "- [ ] ",
+      "",
+      "#### BLOCKED",
+      "- [ ] "
+    ],
+    "description": "planning"
+  }
+}
+

@@ -1,0 +1,121 @@
+{
+  "Create Link": {
+    "prefix": "Link",
+    "body": [
+      "<Link href='${1}'>",
+      "  <a>${2}</a>",
+      "</Link>"
+    ],
+    "description": "create Link"
+  },
+  "Import Link from next": {
+    "prefix": "iL",
+    "body": [
+      "import Link from 'next/link';"
+    ],
+    "description": "import Link"
+  },
+  "Import NextJs Image": {
+    "prefix": "iI",
+    "body": [
+      "import Image from 'next/image';"
+    ],
+    "description": "Import NextJs Image API"
+  },
+  "Import useRouter from next": {
+    "prefix": "iur",
+    "body": [
+      "import { useRouter } from 'next/router';"
+    ],
+    "description": "import { useRouter }"
+  },
+  "create Image component, nextjs": {
+    "prefix": "Im",
+    "body": [
+      "<ImageWrapper>",
+      "  <Image ",
+      "    src=\"/${1}\" ",
+      "    alt=\"${2}\"",
+      "    width={${3}}",
+      "    height={${4}}",
+      "    layout=\"fill\"",
+      "  />",
+      "</ImageWrapper>",
+      ""
+    ],
+    "description": "create Image component, nextjs"
+  },
+  "template page for my-learning-site": {
+    "prefix": "template",
+    "body": [
+      "import Layout from 'components/layout';",
+      "import Container from 'components/container';",
+      "import styled from 'styled-components';",
+      "",
+      "import {",
+      "  Title, Heading, TextBlock, ExamplesWrapper, Example",
+      "} from 'styles/sharedstyles';",
+      "",
+      "export default function ${1}() {",
+      "  return (",
+      "",
+      "    <Layout pageTitle=\"${1}\" ${2}>",
+      "      <Container maxWidth='700px'>",
+      "",
+      "        <Title>$1</Title>",
+      "        ${3}",
+      "      </Container>",
+      "    </Layout>",
+      "",
+      "  )",
+      "};"
+    ],
+    "description": "template page for my-learning-site"
+  },
+  "template-links": {
+    "prefix": "template-links",
+    "body": [
+      "import Link from 'next/link';",
+      "import Layout from '../../components/layout';",
+      "import Container from '../../components/container';",
+      "",
+      "import {",
+      "  Title, ExamplesWrapper, LinksWrapper",
+      "} from '../../components/sharedstyles';",
+      "",
+      "const ${2} = [",
+      "  '${3}',",
+      "];",
+      "",
+      "export default function ${1}() {",
+      "  return (",
+      "",
+      "    <Layout pageTitle=\"${1}\">",
+      "",
+      "      <Title>${1}</Title>",
+      "",
+      "      <Container maxWidth='400px'>",
+      "",
+      "        <ExamplesWrapper>",
+      "",
+      "          <LinksWrapper>",
+      "            {${2}.map(item => ",
+      "              <Link href={'/${4}/' + item} key={item}>",
+      "                <a>{item}</a>",
+      "              </Link>",
+      "            )}",
+      "          </LinksWrapper>",
+      "",
+      "        </ExamplesWrapper>",
+      "",
+      "      </Container>",
+      "",
+      "    </Layout>",
+      "",
+      "  )",
+      "};",
+      ""
+    ],
+    "description": "template-links"
+  }
+}

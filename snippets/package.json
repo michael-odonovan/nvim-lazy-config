@@ -1,0 +1,88 @@
+{
+  "name": "My Snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/javascript-ecosystem/imports.json"
+      },
+      {
+        "language": [
+          "css",
+          "scss",
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/css.json"
+      },
+      {
+        "language": [
+          "html",
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/javascript-ecosystem/javascript-vanilla.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/javascript-ecosystem/styled-components.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/javascript-ecosystem/react-ts.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/javascript-ecosystem/comments.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescriptreact",
+          "typescript"
+        ],
+        "path": "./snippets/javascript-ecosystem/nextjs.json"
+      },
+      {
+        "language": [
+          "vimwiki"
+        ],
+        "path": "./snippets/markdown.json"
+      }
+    ]
+  }
+}

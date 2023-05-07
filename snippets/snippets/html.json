@@ -1,0 +1,61 @@
+{
+  "html page": {
+    "prefix": "html5",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "  <head>",
+      "    <title>${1}</title>",
+      "    <meta charset=\"UTF-8\">",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+      "    <link href=\"styles.css\" rel=\"stylesheet\">",
+      "  </head>",
+      "  <body>",
+      "    ${2}",
+      "  ",
+      "  </body>",
+      "</html>",
+      ""
+    ],
+    "description": "html page"
+  },
+  "gallery grid": {
+    "prefix": "gallery-grid",
+    "body": [
+      "<div>",
+      "  <div class=\"gallery__item gallery__item--1\">",
+      "    <img src=\"assets/images/dog-1.jpg\" class=\"gallery__img\" alt=\"Image 1\" />",
+      "  </div>",
+      "",
+      "  <div class=\"gallery__item gallery__item--2\">",
+      "    <img src=\"assets/images/dog-2.jpg\" class=\"gallery__img\" alt=\"Image 2\" />",
+      "  </div>",
+      "",
+      "  <div class=\"gallery__item gallery__item--3\">",
+      "    <img src=\"assets/images/dog-3.jpg\" class=\"gallery__img\" alt=\"Image 3\" />",
+      "  </div>",
+      "",
+      "  <div class=\"gallery__item gallery__item--4\">",
+      "    <img src=\"assets/images/dog-4.jpg\" class=\"gallery__img\" alt=\"Image 4\" />",
+      "  </div>",
+      "",
+      "  <div class=\"gallery__item gallery__item--5\">",
+      "    <img src=\"assets/images/dog-5.jpg\" class=\"gallery__img\" alt=\"Image 5\" />",
+      "  </div>",
+      "",
+      "  <div class=\"gallery__item gallery__item--6\">",
+      "    <img src=\"assets/images/dog-6.jpg\" class=\"gallery__img\" alt=\"Image 6\" />",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "gallery grid"
+  },
+  "robots": {
+    "prefix": "robots",
+    "body": [
+      "User-agent: Googlebot-Image",
+      "Disallow: /"
+    ],
+    "description": "robots"
+  }
+}

@@ -1,14 +1,17 @@
 local M = {}
-
--- options
 local vo = vim.opt
 local vg = vim.g
-
-vg.mapleader = " "
 
 -- vim.cmd[[colorscheme tokyonight]]
 vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme onedark]]
+
+-- netrw
+vg.netrw_browse_split = 0
+vg.netrw_banner = 0
+vg.netrw_winsize = 25
+
+vg.mapleader = " "
 
 -- fixes gx open files functionality
 vg.netrw_browsex_viewer="open"

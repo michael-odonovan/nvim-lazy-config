@@ -1,0 +1,142 @@
+{
+  "border red": {
+    "prefix": "br",
+    "body": [
+      "border: 1px solid red;"
+    ],
+    "description": "border red"
+  },
+  "flex": {
+    "prefix": "flex",
+    "body": [
+      "display: flex;",
+      "justify-content: center;",
+      "align-items: center;"
+    ],
+    "description": "flex"
+  },
+  "css animation": {
+    "prefix": "css-animation",
+    "body": [
+      ".element {",
+      "  /* if you want it to run just once, just leave out \"infinite\" */",
+      "  animation: arrow-animation 1s ease-in-out infinite;",
+      "}",
+      "",
+      "@keyframes arrow-animation {",
+      "  0% {",
+      "    transform: translate(-20%);",
+      "  }",
+      "  20% {",
+      "    transform: translate(15%);",
+      "  }",
+      "  100% {",
+      "    transform: translate(-20%);",
+      "  }",
+      "}"
+    ],
+    "description": "css animation"
+  },
+  "reset simple": {
+    "prefix": "reset-simple",
+    "body": [
+      "* {",
+      "  margin: 0;",
+      "  padding: 0;",
+      "  box-sizing: border-box;",
+      "}"
+    ],
+    "description": "reset simple"
+  },
+  "gallery grid": {
+    "prefix": "gallery-grid",
+    "body": [
+      ".gallery {",
+      "  display: grid;",
+      "  grid-gap: 35px;",
+      "}",
+      "",
+      ".gallery .gallery__img {",
+      "  width: 100%;",
+      "  height: 100%;",
+      "  -o-object-fit: cover;",
+      "  object-fit: cover;",
+      "}",
+      "",
+      "@media (min-width: 700px) {",
+      "  .gallery {",
+      "    grid-template-columns: 1fr 1fr;",
+      "    grid-template-rows: 1fr 1fr 1fr;",
+      "  }",
+      "}"
+    ],
+    "description": "gallery grid"
+  },
+  "gradient": {
+    "prefix": "gradient",
+    "body": [
+      ".container {",
+      "  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);",
+      "  /* background: linear-gradient(<angle>, color1 color1-stop-at, color2 color2-start-at); */",
+      "}"
+    ],
+    "description": "gradient"
+  },
+  "grid with numbers": {
+    "prefix": "grid numbers",
+    "body": [
+      ".grid-parent {",
+      "  height: 400px;",
+      "  display: grid;",
+      "  grid-template-columns: repeat(3, 1fr);",
+      "  grid-template-rows: repeat(3, 1fr);",
+      "  background: lightgreen;",
+      "}",
+      "",
+      ".grid-child {",
+      "  grid-column: 1 / 3;",
+      "  grid-row: 1 / 3;",
+      "  background: gray;",
+      "}"
+    ],
+    "description": "grid with numbers"
+  },
+  "grid with areas": {
+    "prefix": "grid areas",
+    "body": [
+      ".grid-parent {",
+      "  height: 400px;",
+      "  display: grid;",
+      "  grid-template-areas:",
+      "  \"one two\"",
+      "  \"one two\";",
+      "  grid-template-columns: 1fr 1fr;",
+      "  grid-template-rows: 1fr 1fr;",
+      "  justify-items: center;",
+      "  align-items: center;",
+      "}",
+      "",
+      ".grid-child {",
+      "  grid-area: one;",
+      "}"
+    ],
+    "description": "grid with areas"
+  },
+  "background image": {
+    "prefix": "background-image",
+    "body": [
+      "background: url(assets/images/portfolio-girl-laptop.jpg);"
+    ],
+    "description": "background image"
+  },
+  "media query": {
+    "prefix": "@media",
+    "body": [
+      "@media (min-width: 800px) {",
+      "  ${1}",
+      "}",
+      ""
+    ],
+    "description": "media query"
+  }
+}
