@@ -1,9 +1,37 @@
-
 local M = {}
-
--- keymaps
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
+
+
+--------------------------------------
+--          Plugin Keymaps          --
+--------------------------------------
+
+-- TELESCOPE
+local builtin = require('telescope.builtin')
+local actions = require('telescope.actions')
+
+-- Enable telescope fzf native, if installed
+pcall(require('telescope').load_extension, 'fzf')
+
+map('n', '<leader>sg', builtin.live_grep, { desc = '[g]rep search' })
+map('n', '<leader>sf', builtin.find_files, { desc = '[f]ile search' })
+map('n', '<leader>sw', builtin.grep_string, { desc = '[w]ord search' })
+map('n', '<leader>sr', builtin.resume, { desc = '[r]esume search' })
+
+map('n', '<leader>s?', builtin.oldfiles, { desc = '[?] recent files search' })
+map('n', '<leader>sb', builtin.buffers, { desc = '[b] Find existing buffers search' })
+map('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp search' })
+map('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostic search' })
+
+-- LAZYGIT
+vim.keymap.set("n", "<leader>l", [[:LazyGit<CR>]], {desc = '[l]azygit'})
+vim.g.lazygit_floating_window_scaling_factor = 1
+
+
+---------------------------------------
+--          General Keymaps          --
+---------------------------------------
 
 -- Netrw ======================
 map("n", "<leader>e", vim.cmd.Ex, { desc = ':[e]x' })
@@ -83,27 +111,5 @@ map("n", "<C-l>", "<C-w>l", opts)
 -- map("n", "<C-j>", "<cmd>cprev<CR>zz")
 -- map("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- map("n", "<leader>j", "<cmd>lprev<CR>zz")
-
--- telescope
-local builtin = require('telescope.builtin')
-local actions = require('telescope.actions')
--- local map = vim.keymap.set
-
--- Enable telescope fzf native, if installed
-pcall(require('telescope').load_extension, 'fzf')
-
-map('n', '<leader>sg', builtin.live_grep, { desc = '[g]rep search' })
-map('n', '<leader>sf', builtin.find_files, { desc = '[f]ile search' })
-map('n', '<leader>sw', builtin.grep_string, { desc = '[w]ord search' })
-map('n', '<leader>sr', builtin.resume, { desc = '[r]esume search' })
-
-map('n', '<leader>s?', builtin.oldfiles, { desc = '[?] recent files search' })
-map('n', '<leader>sb', builtin.buffers, { desc = '[b] Find existing buffers search' })
-map('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp search' })
-map('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostic search' })
-
--- lazygit in a floating window
-vim.keymap.set("n", "<leader>l", [[:LazyGit<CR>]], {desc = '[l]azygit'})
-vim.g.lazygit_floating_window_scaling_factor = 1
 
 return M
