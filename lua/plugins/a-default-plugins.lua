@@ -1,3 +1,6 @@
+-- local nightfly = require('lualine.themes.nightfly')
+-- nightfly.normal.c.bg = 'None'
+
 return {
 
   ----------------------------
@@ -6,27 +9,6 @@ return {
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-
-
-  { -- Set lualine as statusline
-    'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
-    opts = {
-      options = {
-        -- icons_enabled = false,
-        theme = 'catppuccin',
-      },
-      sections = {
-        lualine_a = {'branch'},
-        lualine_b = {{ 'filename', path = 1 }},
-        lualine_c = {},
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {}
-      },
-    },
-  },
-
 
   -- Undo Tree
   { "mbbill/undotree" },

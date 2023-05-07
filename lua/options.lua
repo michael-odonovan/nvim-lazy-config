@@ -39,7 +39,6 @@ vim.g.netrw_browsex_viewer="open"
 vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme onedark]]
 
-
 -- Make line numbers default
 vim.wo.number = true
 
