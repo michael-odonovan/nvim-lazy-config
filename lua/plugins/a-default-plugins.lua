@@ -1,18 +1,46 @@
 return {
 
-  -- colorscheme
-  {
+  ----------------------------
+  ----    experimental    ----
+  ----------------------------
+
+  -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
+
+
+  { -- Set lualine as statusline
+    'nvim-lualine/lualine.nvim',
+    -- See `:help lualine.txt`
+    opts = {
+      options = {
+        icons_enabled = false,
+        theme = 'onedark',
+        component_separators = '|',
+        section_separators = '',
+      },
+    },
+  },
+
+
+  ----------------------------
+  ----    keepers         ----
+  ----------------------------
+
+  -- Git related plugins
+  'tpope/vim-fugitive',
+  'tpope/vim-rhubarb', -- :GBrowse
+  'kdheepak/lazygit.nvim',
+
+  { -- Colorscheme
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    config = function() vim.cmd.colorscheme 'catppuccin' end,
+    config = function()
+      vim.cmd.colorscheme 'catppuccin'
+    end,
   },
 
-  { 'tpope/vim-fugitive' },
 
-  { 'kdheepak/lazygit.nvim' },
-
-  { 'tpope/vim-rhubarb' },
 
   {
     'nvim-telescope/telescope.nvim',
