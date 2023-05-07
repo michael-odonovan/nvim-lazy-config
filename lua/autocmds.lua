@@ -1,6 +1,14 @@
 
 local M = {}
 
+-- Format on Save
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+--   pattern = { "*.ts" },
+--   callback = function()
+--     vim.lsp.buf.format { async = true }
+--   end,
+-- })
+
 local function augroup(name)
   return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
 end
