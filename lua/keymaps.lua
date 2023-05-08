@@ -4,9 +4,9 @@ local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
 
---------------------------------------
---          Plugin Keymaps          --
---------------------------------------
+-----------------------------------------------------
+--          Plugin Keymaps          -----------------
+-----------------------------------------------------
 
 -- LUASNIP
 map("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
@@ -54,9 +54,9 @@ vim.keymap.set("n", "<leader>n", [[:Neural ]], {desc = '[n]eural'})
 
 
 
----------------------------------------
---          General Keymaps          --
----------------------------------------
+------------------------------------------------------
+--          General Keymaps          -----------------
+------------------------------------------------------
 
 -- FORMATTING
 vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {desc = '[p]roject [f]ormat'})
