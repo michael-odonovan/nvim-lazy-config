@@ -14,17 +14,19 @@ return {
   { "mbbill/undotree" },
 
 
+
   ----------------------------
-  ----    keepers         ----
+  ----    stable         ----
   ----------------------------
 
-  -- Git related plugins
+  -- GIT
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb', -- :GBrowse
   'kdheepak/lazygit.nvim',
 
 
-  { -- Colorscheme
+  -- COLORSCHEME
+  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
@@ -34,7 +36,8 @@ return {
   },
 
 
-  { -- Telescope
+  -- TELESCOPE
+  {
     'nvim-telescope/telescope.nvim',
     version = '*',
     dependencies = { 'nvim-lua/plenary.nvim' }
@@ -81,6 +84,7 @@ return {
     tag = "*",
     config = function() require("nvim-surround").setup() end
   },
+
 
   -- <C-y,> real quick
   { "mattn/emmet-vim" },

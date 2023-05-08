@@ -8,22 +8,26 @@ local map = vim.keymap.set
 --          Plugin Keymaps          --
 --------------------------------------
 
+-- LUASNIP
+map("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+map("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+map("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+map("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+
+
 -- TELESCOPE
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
-
--- Enable telescope fzf native, if installed
-pcall(require('telescope').load_extension, 'fzf')
-
 map('n', '<leader>sg', builtin.live_grep, { desc = '[g]rep search' })
 map('n', '<leader>sf', builtin.find_files, { desc = '[f]ile search' })
 map('n', '<leader>sw', builtin.grep_string, { desc = '[w]ord search' })
 map('n', '<leader>sr', builtin.resume, { desc = '[r]esume search' })
-
 map('n', '<leader>s?', builtin.oldfiles, { desc = '[?] recent files search' })
 map('n', '<leader>sb', builtin.buffers, { desc = '[b] Find existing buffers search' })
 map('n', '<leader>sh', builtin.help_tags, { desc = '[h]elp search' })
 map('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostic search' })
+-- Enable telescope fzf native, if installed
+pcall(require('telescope').load_extension, 'fzf')
 
 
 -- LAZYGIT
