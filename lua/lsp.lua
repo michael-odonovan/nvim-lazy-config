@@ -1,16 +1,13 @@
 local M = {}
 
 local map = vim.keymap.set
-
--- lsp ---------------------------------------------
 local lsp = require("lsp-zero")
-local luaserver = 'lua_ls'
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   -- note these server names can't include hyphens
-  luaserver,
+  'lua_ls',
   'tsserver',
   'cssls',
   'html',
