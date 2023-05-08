@@ -35,10 +35,6 @@ vim.g.netrw_winsize = 25
 -- fixes gx open files functionality in netrw
 vim.g.netrw_browsex_viewer="open"
 
--- vim.cmd[[colorscheme tokyonight]]
-vim.cmd[[colorscheme catppuccin]]
--- vim.cmd[[colorscheme onedark]]
-
 -- Make line numbers default
 vim.wo.number = true
 
@@ -58,7 +54,7 @@ vim.o.breakindent = true
 vim.o.undofile = true
 vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
--- Searching 
+-- Searching
 -- case insensitive searching
 vim.o.ignorecase = true
 -- unless capital in search

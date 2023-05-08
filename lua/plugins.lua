@@ -14,10 +14,10 @@ return {
   'mbbill/undotree',
 
 
-  {
-    'akinsho/toggleterm.nvim',
-    config = function() require'toggleterm'.setup() end
-  },
+  -- {
+  --   'akinsho/toggleterm.nvim',
+  --   config = function() require('toggleterm').setup() end
+  -- },
 
 
   -----------------------------------------
@@ -30,7 +30,7 @@ return {
   'kdheepak/lazygit.nvim',
 
 
-  -- colorscheme
+  -- colorschemes
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -39,6 +39,13 @@ return {
       vim.cmd.colorscheme 'catppuccin'
     end,
   },
+  -- {
+  --   'folke/tokyonight.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'tokyonight'
+  --   end,
+  -- },
 
 
   -- telescope
@@ -97,7 +104,7 @@ return {
     'norcalli/nvim-colorizer.lua',
     event = 'BufRead',
     config = function()
-      require'colorizer'.setup({
+      require('colorizer').setup({
         'lua';
         'css';
         'javascript';
@@ -189,8 +196,6 @@ return {
           'vim',
           'regex',
           'bash',
-          'markdown',
-          'markdown_inline',
           'css',
           'scss',
         },
@@ -205,10 +210,11 @@ return {
         highlight = {
           enable = true,
 
-          -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-          -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-          -- Using this option may slow down your editor, and you may see some duplicate highlights.
-          -- Instead of true it can also be a list of languages
+          ------------------------------------------------------------------------------
+          -- !!! THIS IS WHAT MAKES MARKDOWN HEADINGS H1 ABLE TO BE DIFFERENT COLORS: !!
+          ------------------------------------------------------------------------------
+          disable = { "markdown" },
+
           additional_vim_regex_highlighting = false,
         },
       }
