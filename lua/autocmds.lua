@@ -1,6 +1,10 @@
 
 local M = {}
 
+local function augroup(name)
+  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+end
+
 -- Format on Save
 -- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 --   pattern = { "*.ts" },
@@ -9,81 +13,68 @@ local M = {}
 --   end,
 -- })
 
-local function augroup(name)
-  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
-end
+-- remove whitespace on save
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
+})
 
--- Highlight on yank
-vim.api.nvim_create_autocmd("TextYankPost", {
-  group = augroup("highlight_yank"),
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = {
+    "Jaq",
+    "qf",
+    "help",
+    "man",
+    "lspinfo",
+    "spectre_panel",
+    "lir",
+    "DressingSelect",
+    "tsplayground",
+  },
   callback = function()
-    vim.highlight.on_yank()
+    vim.cmd [[
+      nnoremap <silent> <buffer> q :close<CR>
+      nnoremap <silent> <buffer> <esc> :close<CR>
+      set nobuflisted
+    ]]
   end,
 })
 
--- resize splits if window got resized
-vim.api.nvim_create_autocmd({ "VimResized" }, {
-  group = augroup("resize_splits"),
+-- quit out of empty buffers
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "" },
   callback = function()
-    vim.cmd("tabdo wincmd =")
-  end,
-})
-
--- go to last line when opening a buffer
-vim.api.nvim_create_autocmd("BufReadPost", {
-  group = augroup("last_loc"),
-  callback = function()
-    local mark = vim.api.nvim_buf_get_mark(0, '"')
-    local lcount = vim.api.nvim_buf_line_count(0)
-    if mark[1] > 0 and mark[1] <= lcount then
-      pcall(vim.api.nvim_win_set_cursor, 0, mark)
+    local buf_ft = vim.bo.filetype
+    if buf_ft == "" or buf_ft == nil then
+      vim.cmd [[
+      nnoremap <silent> <buffer> q :close<CR>
+      " nnoremap <silent> <buffer> <c-j> j<CR>
+      " nnoremap <silent> <buffer> <c-k> k<CR>
+      set nobuflisted
+    ]]
     end
   end,
 })
 
--- close some filetypes with <q>
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("close_with_q"),
-  pattern = {
-    "qf",
-    "help",
-    "man",
-    "notify",
-    "lspinfo",
-    "spectre_panel",
-    "startuptime",
-    "tsplayground",
-    "PlenaryTestPopup",
-    "checkhealth",
-  },
-  callback = function(event)
-    vim.bo[event.buf].buflisted = false
-    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
-  end,
-})
-
--- wrap and check for spell in text filetypes
-vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("wrap_spell"),
-  pattern = { "gitcommit", "markdown" },
+-- stop comments starting on the next line
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
   callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.spell = true
+    vim.cmd "set formatoptions-=cro"
   end,
 })
 
--- Check if we need to reload the file when it changed
-vim.api.nvim_create_autocmd({ "FocusGained", "TermClose", "TermLeave" }, {
-  group = augroup("checktime"),
-  command = "checktime",
-})
-
--- fix comment on new line
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  pattern = { "*" },
+-- keep split windows equal when resizing
+vim.api.nvim_create_autocmd({ "VimResized" }, {
   callback = function()
-    vim.cmd([[set formatoptions-=cro]])
+    vim.cmd "tabdo wincmd ="
   end,
+})
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  pattern = '*',
 })
 
 return M

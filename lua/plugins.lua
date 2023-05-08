@@ -3,37 +3,37 @@
 
 return {
 
-  ----------------------------
-  ----    experimental    ----
-  ----------------------------
+  -----------------------------------------
+  ----------- NEW -------------------------
+  -----------------------------------------
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
   -- Undo Tree
-  { "mbbill/undotree" },
+  'mbbill/undotree',
 
 
   {
-    "akinsho/toggleterm.nvim",
-    config = function() require"toggleterm".setup() end
+    'akinsho/toggleterm.nvim',
+    config = function() require'toggleterm'.setup() end
   },
 
 
-  ----------------------------
-  ----    stable         ----
-  ----------------------------
+  -----------------------------------------
+  ----------- STABLE ----------------------
+  -----------------------------------------
 
-  -- GIT
+  -- git
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb', -- :GBrowse
   'kdheepak/lazygit.nvim',
 
 
-  -- COLORSCHEME
+  -- colorscheme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
     config = function()
       vim.cmd.colorscheme 'catppuccin'
@@ -41,12 +41,12 @@ return {
   },
 
 
-  -- TELESCOPE
+  -- telescope
   {
     'nvim-telescope/telescope.nvim',
     version = '*',
     dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function() 
+    config = function()
       require('telescope').setup {
         defaults = {
           mappings = {
@@ -61,12 +61,13 @@ return {
   },
 
 
+  -- which-key
   {
-    "folke/which-key.nvim",
+    'folke/which-key.nvim',
     config = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
-      require("which-key").setup {
+      require('which-key').setup {
         plugins = {
           marks = false,
           registers = false,
@@ -91,9 +92,10 @@ return {
     end
   },
 
+  -- colorizer
   {
     'norcalli/nvim-colorizer.lua',
-    event = "BufRead",
+    event = 'BufRead',
     config = function()
       require'colorizer'.setup({
         'lua';
@@ -106,47 +108,48 @@ return {
     end
   },
 
+  -- IMPROVED TEXT EDITING
+  -- autopairs
   {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup() end
+    'windwp/nvim-autopairs',
+    config = function() require('nvim-autopairs').setup() end
+  },
+
+  -- trouble
+  {
+    'folke/trouble.nvim',
+    dependencies = 'kyazdani42/nvim-web-devicons',
+  },
+
+  'lukas-reineke/indent-blankline.nvim',
+
+  'davidgranstrom/nvim-markdown-preview',
+
+  'kyazdani42/nvim-web-devicons',
+
+  {
+    'numToStr/Comment.nvim',
+    config = function() require('Comment').setup() end
   },
 
   {
-    "folke/trouble.nvim",
-    dependencies = "kyazdani42/nvim-web-devicons",
+    'kylechui/nvim-surround',
+    tag = '*',
+    config = function() require('nvim-surround').setup() end
   },
 
-  { "lukas-reineke/indent-blankline.nvim" },
-
-  { "davidgranstrom/nvim-markdown-preview" },
-
-  { "kyazdani42/nvim-web-devicons" },
-
-  {
-    "numToStr/Comment.nvim",
-    config = function() require("Comment").setup() end
-  },
-
-  {
-    "kylechui/nvim-surround",
-    tag = "*",
-    config = function() require("nvim-surround").setup() end
-  },
-
-
-  -- <C-y,> real quick
-  { "mattn/emmet-vim" },
+  'mattn/emmet-vim', -- <C-y,> real quick
 
   -- makes it able to to repeat vim-surround functions
-  { "tpope/vim-repeat", event = "VeryLazy" },
+  { 'tpope/vim-repeat', event = 'VeryLazy' },
 
   -- adds shortcuts for highlighting inner jsx tags
-  { "michaeljsmith/vim-indent-object" },
+  'michaeljsmith/vim-indent-object',
 
   {
-    "dense-analysis/neural",
+    'dense-analysis/neural',
     config = function()
-      require("neural").setup {
+      require('neural').setup {
         source = {
           openai = {
             api_key = vim.env.OPENAI_API_KEY,
@@ -156,7 +159,7 @@ return {
     end,
   },
 
-  { "theprimeagen/harpoon" },
+  'theprimeagen/harpoon',
 
 
   {
@@ -167,7 +170,29 @@ return {
     end,
     config = function()
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'json', 'query', 'tsx', 'yaml', 'c', 'html', 'javascript', 'lua', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'vim', 'regex', 'bash', 'markdown', 'markdown_inline', 'css', 'scss',
+        ensure_installed = {
+          'json',
+          'query',
+          'tsx',
+          'yaml',
+          'c',
+          'html',
+          'javascript',
+          'lua',
+          'cpp',
+          'go',
+          'lua',
+          'python',
+          'rust',
+          'typescript',
+          'vimdoc',
+          'vim',
+          'regex',
+          'bash',
+          'markdown',
+          'markdown_inline',
+          'css',
+          'scss',
         },
 
         -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -191,27 +216,27 @@ return {
   },
 
   {
-    "VonHeikemen/lsp-zero.nvim",
-    branch = "v1.x",
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v1.x',
     dependencies = {
       -- LSP Support
-      { "neovim/nvim-lspconfig" },             -- Required
-      { "williamboman/mason.nvim" },           -- Optional
-      { "williamboman/mason-lspconfig.nvim" }, -- Optional
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" },         -- Required
-      { "hrsh7th/cmp-nvim-lsp" },     -- Required
-      { "hrsh7th/cmp-buffer" },       -- Optional
-      { "hrsh7th/cmp-path" },         -- Optional
-      { "saadparwaiz1/cmp_luasnip" }, -- Optional
-      { "hrsh7th/cmp-nvim-lua" },     -- Optional
+      { 'hrsh7th/nvim-cmp' },         -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
+      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
 
       -- Snippets
-      { "L3MON4D3/LuaSnip",
+      { 'L3MON4D3/LuaSnip',
         config = function ()
-          require("luasnip.loaders.from_vscode").load({
-            paths = { "~/.config/nvim/snippets" }
+          require('luasnip.loaders.from_vscode').load({
+            paths = { '~/.config/nvim/snippets' }
           })
         end
       },

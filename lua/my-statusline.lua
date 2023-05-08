@@ -12,4 +12,4 @@ end
 
 vim.cmd[[ set statusline=%!luaeval('my_statusline()') ]]
 
-return {}
+return M
