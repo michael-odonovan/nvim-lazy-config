@@ -40,7 +40,19 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     version = '*',
-    dependencies = { 'nvim-lua/plenary.nvim' }
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function() 
+      require('telescope').setup {
+        defaults = {
+          mappings = {
+            i = {
+              ['<C-p>'] = require('telescope.actions').cycle_history_prev,
+              ['<C-n>'] = require('telescope.actions').cycle_history_next,
+            },
+          },
+        },
+      }
+    end,
   },
 
 
@@ -55,7 +67,8 @@ return {
         html = {
           mode = 'foreground';
         }
-    }) end
+      })
+    end
   },
 
   {
