@@ -4,7 +4,7 @@
 return {
 
   -----------------------------------------
-  ----------- NEW -------------------------
+  --          NEW                        --
   -----------------------------------------
 
   -- Detect tabstop and shiftwidth automatically
@@ -21,14 +21,8 @@ return {
 
 
   -----------------------------------------
-  ----------- STABLE ----------------------
+  --          STABLE                     --
   -----------------------------------------
-
-  -- git
-  'tpope/vim-fugitive',
-  'tpope/vim-rhubarb', -- :GBrowse
-  'kdheepak/lazygit.nvim',
-
 
   -- colorschemes
   {
@@ -46,6 +40,12 @@ return {
   --     vim.cmd.colorscheme 'tokyonight'
   --   end,
   -- },
+
+
+  -- git
+  'tpope/vim-fugitive',
+  'tpope/vim-rhubarb', -- :GBrowse
+  'kdheepak/lazygit.nvim',
 
 
   -- telescope
@@ -66,6 +66,10 @@ return {
       }
     end,
   },
+
+
+  -- harpoon
+  'theprimeagen/harpoon',
 
 
   -- which-key
@@ -99,6 +103,7 @@ return {
     end
   },
 
+
   -- colorizer
   {
     'norcalli/nvim-colorizer.lua',
@@ -115,6 +120,7 @@ return {
     end
   },
 
+
   -- IMPROVED TEXT EDITING
   -- autopairs
   {
@@ -122,37 +128,46 @@ return {
     config = function() require('nvim-autopairs').setup() end
   },
 
-  -- trouble
-  {
-    'folke/trouble.nvim',
-    dependencies = 'kyazdani42/nvim-web-devicons',
-  },
-
-  'lukas-reineke/indent-blankline.nvim',
-
-  'davidgranstrom/nvim-markdown-preview',
-
-  'kyazdani42/nvim-web-devicons',
-
+  -- Comment
   {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup() end
   },
 
+  -- surround
   {
     'kylechui/nvim-surround',
     tag = '*',
     config = function() require('nvim-surround').setup() end
   },
 
-  'mattn/emmet-vim', -- <C-y,> real quick
-
-  -- makes it able to to repeat vim-surround functions
+  -- repeat surround functions
   { 'tpope/vim-repeat', event = 'VeryLazy' },
+
+  -- emmet =>  <C-y>,  real quick
+  'mattn/emmet-vim',
 
   -- adds shortcuts for highlighting inner jsx tags
   'michaeljsmith/vim-indent-object',
 
+
+  -- trouble
+  {
+    'folke/trouble.nvim',
+    dependencies = 'kyazdani42/nvim-web-devicons',
+  },
+
+
+  'lukas-reineke/indent-blankline.nvim',
+
+
+  'davidgranstrom/nvim-markdown-preview',
+
+
+  'kyazdani42/nvim-web-devicons',
+
+
+  -- neural AI
   {
     'dense-analysis/neural',
     config = function()
@@ -166,11 +181,9 @@ return {
     end,
   },
 
-  'theprimeagen/harpoon',
 
-
+  -- treesitter
   {
-    -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
@@ -221,6 +234,8 @@ return {
     end
   },
 
+
+  -- lsp-zero and luasnip
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
