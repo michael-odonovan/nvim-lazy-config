@@ -54,31 +54,31 @@ vim.keymap.set("n", "<leader>n", [[:Neural ]], {desc = '[n]eural'})
 --          General Keymaps          --
 ---------------------------------------
 
--- Formatting
+-- FORMATTING
 vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {desc = '[p]roject [f]ormat'})
 
 
--- Netrw
+-- NETRW
 map("n", "<leader>e", vim.cmd.Ex, { desc = ':[e]x' })
 
 
--- Saving, Exiting
+-- SAVING, EXITING
 map("n", "<C-s>", ":wa<CR>", opts)
 map("n", "<leader>w", ":w<CR>", {desc ='[w]rite'}, opts)
 map("n", "<leader>q", ":q!<CR>", {desc = '[q]uit'})
 
 
--- Search
+-- SEARCH
 map("n", "<leader>f", [[:%s/]], {desc = '[f]ind replace'})
 map("n", "<leader>F", [[:,$s/]], {desc = '[F]ind replace from cursor'})
 
 
--- shifting Blocks of Text
+-- SHIFTING BLOCKS OF TEXT
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
 
--- Cursor Placements:
+-- CURSOR PLACEMENTS
 -- on <C-d> <C-u> => make line the center of the screen (zz)
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
@@ -87,30 +87,30 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
 
--- Paste over issues
+-- PASTE OVER ISSUES
 map("x", "<leader>p", [["_dP]])
 map({"n", "v"}, "<leader>d", [["_d]])
 
 
--- Yanking, ahem...
+-- YANKING
 map({"n", "v"}, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
 
 
--- Visual Line Movement
+-- VISUAL LINE MOVEMENT
 map("n", "j", "gj", opts)
 map("n", "k", "gk", opts)
 
 
--- Copy to the System Clipboard with YY
+-- COPY TO THE SYSTEM CLIPBOARD WITH YY
 map("n", "YY", "+y<CR>", opts)
 
 
--- Make yank Y behave like D & C
+-- MAKE YANK Y BEHAVE LIKE D & C
 map("n", "Y", "y$", opts)
 
 
--- Tabs
+-- TABS
 -- new tab with same cursor position
 map("n", "<leader>at", "mm:tabnew %<CR>`m:delm m<CR>", {desc = '[tab] [n]ew'})
 -- moving between tabs
@@ -118,37 +118,37 @@ map("n", "<leader>an", ":tabn<CR>", {desc = '[n]next tab'})
 map("n", "<leader>ap", ":tabp<CR>", {desc = '[p]rev tab'})
 
 
--- Splits
+-- SPLITS
 map("n", "<leader>av", ":vsp<CR><C-w>l", {desc = '[v]ertical split'})
 
 
--- my notes / wiki mappings
+-- MY NOTES / WIKI MAPPINGS
 map("n", "<leader>tb", "0i- [ ] ", {desc = '[t]ick [b]ox'} )
 map("n", "<leader>td", "^wlrX<Esc>", {desc = '[t]odo [d]one'})
 map("n", "<leader>tu", "^fXr ", {desc = '[t]odo [u]ndone'})
 
 
--- Current Working Directory stuff
+-- MOVE TO CURRENT WORKING DIRECTORY
 map("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>", {desc = '[c]hange [d]irectory'})
 
 
--- Stay in indent mode
+-- STAY IN INDENT MODE
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
--- Search for visually selected text with //
+-- SEARCH FOR VISUALLY SELECTED TEXT WITH //
 map("v", "//", "y/\\V<C-R>=escape(@\",'/')<CR><CR>", opts)
 
 
--- Better window navigation
+-- BETTER WINDOW NAVIGATION
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
 
--- quickfix window
+-- QUICKFIX WINDOW
 -- map("n", "<C-k>", "<cmd>cnext<CR>zz")
 -- map("n", "<C-j>", "<cmd>cprev<CR>zz")
 -- map("n", "<leader>k", "<cmd>lnext<CR>zz")

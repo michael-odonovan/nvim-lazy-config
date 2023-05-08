@@ -1,17 +1,6 @@
 local map = vim.keymap.set
 
 
--- colorizer -------------------------------------
-require 'colorizer'.setup {
-  'lua';
-  'css';
-  'javascript';
-  html = {
-    mode = 'foreground';
-  }
-}
-
-
 -- lsp ---------------------------------------------
 local lsp = require("lsp-zero")
 local luaserver = 'lua_ls'

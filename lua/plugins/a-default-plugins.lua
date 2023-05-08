@@ -44,7 +44,15 @@ return {
   {
     'norcalli/nvim-colorizer.lua',
     event = "BufRead",
-    config = function() require'colorizer'.setup() end
+    config = function()
+      require'colorizer'.setup({
+        'lua';
+        'css';
+        'javascript';
+        html = {
+          mode = 'foreground';
+        }
+    }) end
   },
 
   {
