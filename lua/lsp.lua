@@ -1,5 +1,6 @@
-local map = vim.keymap.set
+local M = {}
 
+local map = vim.keymap.set
 
 -- lsp ---------------------------------------------
 local lsp = require("lsp-zero")
@@ -44,4 +45,4 @@ vim.diagnostic.config({
 })
 
 
-
+return M

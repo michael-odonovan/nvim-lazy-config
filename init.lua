@@ -23,6 +23,7 @@ require('lazy').setup('plugins')
 -- general sourcing
 require('options')
 require('keymaps')
+require('lsp')
 require('autocmds')
 require('macros')
 require('my-statusline')

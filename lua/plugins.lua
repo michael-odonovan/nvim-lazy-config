@@ -158,12 +158,70 @@ return {
 
   { "theprimeagen/harpoon" },
 
-  { "L3MON4D3/LuaSnip",
-    config = function ()
-      require("luasnip.loaders.from_vscode").load({
-        paths = { "~/.config/nvim/snippets" }
-      })
+
+  {
+    -- Highlight, edit, and navigate code
+    'nvim-treesitter/nvim-treesitter',
+    build = function()
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
+    end,
+    config = function()
+      require('nvim-treesitter.configs').setup {
+        ensure_installed = { 'json', 'query', 'tsx', 'yaml', 'c', 'html', 'javascript', 'lua', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'vim', 'regex', 'bash', 'markdown', 'markdown_inline', 'css', 'scss',
+        },
+
+        -- Install parsers synchronously (only applied to `ensure_installed`)
+        sync_install = false,
+
+        -- Automatically install missing parsers when entering buffer
+        -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+        auto_install = false,
+
+        highlight = {
+          enable = true,
+
+          -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+          -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+          -- Using this option may slow down your editor, and you may see some duplicate highlights.
+          -- Instead of true it can also be a list of languages
+          additional_vim_regex_highlighting = false,
+        },
+      }
     end
-  }
+  },
+
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    branch = "v1.x",
+    dependencies = {
+      -- LSP Support
+      { "neovim/nvim-lspconfig" },             -- Required
+      { "williamboman/mason.nvim" },           -- Optional
+      { "williamboman/mason-lspconfig.nvim" }, -- Optional
+
+      -- Autocompletion
+      { "hrsh7th/nvim-cmp" },         -- Required
+      { "hrsh7th/cmp-nvim-lsp" },     -- Required
+      { "hrsh7th/cmp-buffer" },       -- Optional
+      { "hrsh7th/cmp-path" },         -- Optional
+      { "saadparwaiz1/cmp_luasnip" }, -- Optional
+      { "hrsh7th/cmp-nvim-lua" },     -- Optional
+
+      -- Snippets
+      { "L3MON4D3/LuaSnip",
+        config = function ()
+          require("luasnip.loaders.from_vscode").load({
+            paths = { "~/.config/nvim/snippets" }
+          })
+        end
+      },
+
+      -- currently using default triggers:
+      -- Tab / arrows => move down snippet list
+      -- Enter => accept snippet
+      -- Arrow => get out of auto selection of 1st snippet
+      -- move thru snippet with <C-j,k> & <Shift-C-j,k>
+    }
+  },
 
 }
