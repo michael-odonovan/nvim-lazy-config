@@ -14,6 +14,11 @@ return {
   { "mbbill/undotree" },
 
 
+  {
+    "akinsho/toggleterm.nvim",
+    config = function() require"toggleterm".setup() end
+  },
+
 
   ----------------------------
   ----    stable         ----
