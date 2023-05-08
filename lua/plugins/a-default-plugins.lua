@@ -57,6 +57,36 @@ return {
 
 
   {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        plugins = {
+          marks = false,
+          registers = false,
+          spelling = {
+            suggestions = 10,
+          },
+          presets = {
+            operators = false,
+            motions = false,
+            text_objects = false,
+            windows = false,
+            nav = false,
+            z = false,
+          },
+        },
+        motions = {
+          count = false,
+        },
+        show_help = false, -- show a help message
+        show_keys = false, -- show the currently pressed key
+      }
+    end
+  },
+
+  {
     'norcalli/nvim-colorizer.lua',
     event = "BufRead",
     config = function()
