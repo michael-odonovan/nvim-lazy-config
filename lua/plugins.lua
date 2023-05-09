@@ -32,6 +32,12 @@ return {
     end,
   },
 
+{
+  'VonHeikemen/fine-cmdline.nvim',
+  requires = {
+    {'MunifTanjim/nui.nvim'}
+  }
+},
 
   -----------------------------------------
   --          STABLE                     --

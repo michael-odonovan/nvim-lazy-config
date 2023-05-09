@@ -8,7 +8,6 @@ local opt = vim.opt
 -- deal with @ in file names
 -- opt.isfname:append("@-@")
 
-opt.cmdheight=2
 
 
 -----------------------------------
