@@ -8,6 +8,14 @@ local map = vim.keymap.set
 --          Plugin Keymaps          -----------------
 -----------------------------------------------------
 
+-- BUFFERS
+map("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
+map("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+-- map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+-- map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+map("n", "<S-q>", "<cmd>bdelete<cr>", { desc = "[d]elete buffer" })
+
+
 -- LUASNIP
 map("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
 map("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
