@@ -13,7 +13,7 @@ map("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 map("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 -- map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 -- map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
-map("n", "<S-q>", "<cmd>bdelete<cr>", { desc = "[d]elete buffer" })
+map("n", "<leader>q", "<cmd>bdelete<cr>", { desc = "[q]uit buffer" })
 
 
 -- LUASNIP
@@ -77,7 +77,7 @@ map("n", "<leader>e", vim.cmd.Ex, { desc = ':[e]x' })
 -- SAVING, EXITING
 map("n", "<C-s>", ":wa<CR>", opts)
 map("n", "<leader>w", ":w<CR>", {desc ='[w]rite'}, opts)
-map("n", "<leader>q", ":q!<CR>", {desc = '[q]uit'})
+-- map("n", "<leader>q", ":q!<CR>", {desc = '[q]uit'})
 
 
 -- SEARCH

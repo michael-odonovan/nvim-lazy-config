@@ -5,28 +5,17 @@ local opt = vim.opt
 -----------------------------------
 --	not sure                 --
 -----------------------------------
-
--- indents
-opt.tabstop = 2
-opt.softtabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true -- convert tabs to spaces
-opt.smartindent = true
-
 -- deal with @ in file names
 -- opt.isfname:append("@-@")
 
--- opt.whichwrap:append {
---   ['<'] = true,
---   ['>'] = true,
---   ['['] = true,
---   [']'] = true,
---   h = true,
---   l = true,
--- }
+-----------------------------------
+--	plugins                      --
+-----------------------------------
+vim.g.undotree_SetFocusWhenToggle = 1
+
 
 -----------------------------------
---	settled                  --
+--	general                      --
 -----------------------------------
 
 -- Colorscheme
@@ -40,6 +29,26 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 -- fixes gx open files functionality in netrw
 vim.g.netrw_browsex_viewer="open"
+
+
+-- Indents
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true -- convert tabs to spaces
+opt.smartindent = true
+
+
+-- Wrapping
+opt.wrap = true
+opt.whichwrap:append {
+  ['<'] = true,
+  ['>'] = true,
+  ['['] = true,
+  [']'] = true,
+  h = true,
+  l = true,
+}
 
 
 -- Numbers
@@ -94,10 +103,6 @@ opt.termguicolors = true
 
 -- Split Below
 opt.splitbelow = true
-
-
--- Wrap
-opt.wrap = true
 
 
 -- Swap File

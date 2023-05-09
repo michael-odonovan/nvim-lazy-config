@@ -25,9 +25,9 @@ return {
   {
     'akinsho/bufferline.nvim',
     version = "*",
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = 'kyazdani42/nvim-web-devicons',
     config = function()
-      require('telescope').setup()
+      require('bufferline').setup()
     end,
   },
 
