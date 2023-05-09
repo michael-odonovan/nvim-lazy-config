@@ -27,32 +27,41 @@ vim.o.smartindent = true
 -----------------------------------
 --	settled                  --
 -----------------------------------
--- netrw
+
+-- Colorscheme
+vim.cmd.colorscheme 'catppuccin'
+-- vim.cmd.colorscheme 'tokyonight'
+
+
+-- Netrw
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
-
 -- fixes gx open files functionality in netrw
 vim.g.netrw_browsex_viewer="open"
 
--- Make line numbers default
+
+-- Numbers
 vim.wo.number = true
+vim.o.relativenumber = false
 
--- Make relative line numbers default
-vim.o.relativenumber = true
 
--- Enable mouse mode
+-- Mouse
 vim.o.mouse = 'a'
 
--- Sync clipboard between OS and Neovim.
+
+-- Clipboard
 vim.o.clipboard = 'unnamedplus'
 
--- Enable break indent
+
+-- Indents
 vim.o.breakindent = true
 
--- Save undo history
+
+-- Undo History
 vim.o.undofile = true
 vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
 
 -- Searching
 -- case insensitive searching
@@ -63,34 +72,47 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
--- Keep signcolumn on by default
+
+-- Signcolumn
 vim.wo.signcolumn = 'yes'
 
--- Decrease update time
+
+-- Update Time
 vim.o.updatetime = 250
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
--- Set completeopt to have a better completion experience
+
+-- Completeopt
 vim.o.completeopt = 'menuone,noselect'
 
--- NOTE: You should make sure your terminal supports this
+
+-- Termguicolors
 vim.o.termguicolors = true
 
+
+-- Split Below
 vim.o.splitbelow = true
 
+
+-- Wrap
 vim.o.wrap = true
 
+
+-- Swap File
 vim.o.swapfile = false
 vim.o.backup = false
 
--- scrolling space
+
+-- Scrolling Position
 vim.o.scrolloff = 8
 
--- highlight the current line
+
+-- Highlight Cursor Line
 vim.o.cursorline = true
 
--- markdown
+
+-- Markdown Code Highlighting
 vim.g.markdown_fenced_languages = {
 	"html",
 	"xml",
@@ -105,5 +127,6 @@ vim.g.markdown_fenced_languages = {
 	"typescript",
 	"tsx=typescript.tsx",
 }
+
 
 return M
