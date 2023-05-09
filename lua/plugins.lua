@@ -24,7 +24,7 @@ return {
   --          STABLE                     --
   -----------------------------------------
 
-  -- colorschemes
+  -- Colorschemes
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -36,13 +36,13 @@ return {
   -- },
 
 
-  -- git
+  -- Git
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb', -- :GBrowse
   'kdheepak/lazygit.nvim',
 
 
-  -- telescope
+  -- Telescope
   {
     'nvim-telescope/telescope.nvim',
     version = '*',
@@ -62,11 +62,11 @@ return {
   },
 
 
-  -- harpoon
+  -- Harpoon
   'theprimeagen/harpoon',
 
 
-  -- which-key
+  -- Which-Key
   {
     'folke/which-key.nvim',
     config = function()
@@ -98,7 +98,7 @@ return {
   },
 
 
-  -- colorizer
+  -- Colorizer
   {
     'norcalli/nvim-colorizer.lua',
     event = 'BufRead',
@@ -116,7 +116,7 @@ return {
 
 
   -- IMPROVED TEXT EDITING
-  -- autopairs
+  -- Autopairs
   {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup() end
@@ -128,24 +128,24 @@ return {
     config = function() require('Comment').setup() end
   },
 
-  -- surround
+  -- Surround
   {
     'kylechui/nvim-surround',
     tag = '*',
     config = function() require('nvim-surround').setup() end
   },
 
-  -- repeat surround functions
+  -- Repeat Surround
   { 'tpope/vim-repeat', event = 'VeryLazy' },
 
-  -- emmet =>  <C-y>,  real quick
+  -- Emmet =>  <C-y>,  real quick
   'mattn/emmet-vim',
 
-  -- adds shortcuts for highlighting inner jsx tags
+  -- Indent Group Selecting
   'michaeljsmith/vim-indent-object',
 
 
-  -- trouble
+  -- Trouble
   {
     'folke/trouble.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
@@ -161,7 +161,7 @@ return {
   'kyazdani42/nvim-web-devicons',
 
 
-  -- neural AI
+  -- Neural AI
   {
     'dense-analysis/neural',
     config = function()
@@ -176,7 +176,7 @@ return {
   },
 
 
-  -- treesitter
+  -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
     build = function()
@@ -229,7 +229,7 @@ return {
   },
 
 
-  -- lsp-zero and luasnip
+  -- Lsp-Zero and Luasnip
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v1.x',
