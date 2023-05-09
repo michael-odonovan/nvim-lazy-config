@@ -8,14 +8,18 @@ local opt = vim.opt
 -- deal with @ in file names
 -- opt.isfname:append("@-@")
 
+opt.cmdheight=2
+
+
 -----------------------------------
---	plugins                      --
+--	plugins                  --
 -----------------------------------
 vim.g.undotree_SetFocusWhenToggle = 1
 
 
+
 -----------------------------------
---	general                      --
+--	general                  --
 -----------------------------------
 
 -- Colorscheme

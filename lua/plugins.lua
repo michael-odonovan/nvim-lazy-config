@@ -7,13 +7,14 @@ return {
   --          NEW                        --
   -----------------------------------------
 
+  { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
+
   -- Undo Tree
   'mbbill/undotree',
 
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
-
 
   -- {
   --   'akinsho/toggleterm.nvim',
@@ -30,7 +31,6 @@ return {
       require('bufferline').setup()
     end,
   },
-
 
 
   -----------------------------------------
