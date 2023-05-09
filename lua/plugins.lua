@@ -7,17 +7,20 @@ return {
   --          NEW                        --
   -----------------------------------------
 
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
-
   -- Undo Tree
   'mbbill/undotree',
+
+
+  -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
 
 
   -- {
   --   'akinsho/toggleterm.nvim',
   --   config = function() require('toggleterm').setup() end
   -- },
+
+
 
 
   -----------------------------------------

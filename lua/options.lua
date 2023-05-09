@@ -1,4 +1,5 @@
 local M = {}
+local opt = vim.opt
 
 
 -----------------------------------
@@ -6,16 +7,16 @@ local M = {}
 -----------------------------------
 
 -- indents
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
-vim.o.expandtab = true -- convert tabs to spaces
-vim.o.smartindent = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true -- convert tabs to spaces
+opt.smartindent = true
 
 -- deal with @ in file names
--- vim.o.isfname:append("@-@")
+-- opt.isfname:append("@-@")
 
--- vim.o.whichwrap:append {
+-- opt.whichwrap:append {
 --   ['<'] = true,
 --   ['>'] = true,
 --   ['['] = true,
@@ -43,34 +44,34 @@ vim.g.netrw_browsex_viewer="open"
 
 -- Numbers
 vim.wo.number = true
-vim.o.relativenumber = false
+opt.relativenumber = false
 
 
 -- Mouse
-vim.o.mouse = 'a'
+opt.mouse = 'a'
 
 
 -- Clipboard
-vim.o.clipboard = 'unnamedplus'
+opt.clipboard = 'unnamedplus'
 
 
 -- Indents
-vim.o.breakindent = true
+opt.breakindent = true
 
 
 -- Undo History
-vim.o.undofile = true
-vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undofile = true
+opt.undolevels = 10000
 
 
 -- Searching
 -- case insensitive searching
-vim.o.ignorecase = true
+opt.ignorecase = true
 -- unless capital in search
-vim.o.smartcase = true
+opt.smartcase = true
 -- Set highlight on search
-vim.o.hlsearch = false
-vim.o.incsearch = true
+opt.hlsearch = false
+opt.incsearch = true
 
 
 -- Signcolumn
@@ -78,38 +79,38 @@ vim.wo.signcolumn = 'yes'
 
 
 -- Update Time
-vim.o.updatetime = 250
-vim.o.timeout = true
-vim.o.timeoutlen = 300
+opt.updatetime = 250
+opt.timeout = true
+opt.timeoutlen = 300
 
 
 -- Completeopt
-vim.o.completeopt = 'menuone,noselect'
+opt.completeopt = 'menuone,noselect'
 
 
 -- Termguicolors
-vim.o.termguicolors = true
+opt.termguicolors = true
 
 
 -- Split Below
-vim.o.splitbelow = true
+opt.splitbelow = true
 
 
 -- Wrap
-vim.o.wrap = true
+opt.wrap = true
 
 
 -- Swap File
-vim.o.swapfile = false
-vim.o.backup = false
+opt.swapfile = false
+opt.backup = false
 
 
 -- Scrolling Position
-vim.o.scrolloff = 8
+opt.scrolloff = 8
 
 
 -- Highlight Cursor Line
-vim.o.cursorline = true
+opt.cursorline = true
 
 
 -- Markdown Code Highlighting
