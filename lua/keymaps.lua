@@ -17,10 +17,10 @@ map("n", "<leader>q", "<cmd>bdelete<cr>", { desc = "[q]uit buffer" })
 
 
 -- LUASNIP
-map("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
-map("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
-map("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
-map("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+map("i", "<C-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+map("s", "<C-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+map("i", "<C-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+map("s", "<C-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
 
 
 -- TELESCOPE
@@ -150,7 +150,7 @@ map("v", ">", ">gv", opts)
 
 
 -- SEARCH FOR VISUALLY SELECTED TEXT WITH //
-map("v", "//", "y/\\V<C-R>=escape(@\",'/')<CR><CR>", opts)
+map("v", "//", "y/\\V<C-r>=escape(@\",'/')<CR><CR>", opts)
 
 
 -- BETTER WINDOW NAVIGATION
