@@ -18,12 +18,12 @@ vim.opt.rtp:prepend(lazypath)
 
 
 -- note plugins cannot be renamed!!!
-require('lazy').setup('plugins')
+require('lazy').setup('user.plugins')
 
 -- general sourcing
-require('options')
-require('keymaps')
-require('lsp')
-require('autocmds')
-require('macros')
-require('my-statusline')
+require('user.options')
+require('user.keymaps')
+require('user.lsp')
+require('user.autocmds')
+require('user.macros')
+require('user.my-statusline')

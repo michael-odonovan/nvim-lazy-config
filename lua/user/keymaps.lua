@@ -13,7 +13,27 @@ map("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 map("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
 -- map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
 -- map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
+
 map("n", "<leader>q", "<cmd>bdelete<cr>", { desc = "[q]uit buffer" })
+
+
+
+
+-- vim.api.nvim_set_keymap('n', '<leader>q', ':lua close_buffer()<CR>', {silent = true})
+
+-- function close_buffer()
+--   local cur_buf = vim.api.nvim_get_current_buf()
+--   local bufs = vim.api.nvim_list_bufs()
+--
+--   -- Check if the current buffer is the last one in the list of buffers
+--   if bufs[#bufs] == cur_buf then
+--     vim.api.nvim_exec([[:q]])
+--   else
+--     vim.api.nvim_exec([[:bd]])
+--   end
+-- end
+
+
 
 
 -- LUASNIP
