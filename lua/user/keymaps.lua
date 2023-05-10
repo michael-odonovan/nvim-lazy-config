@@ -130,10 +130,10 @@ map("n", "Y", "y$", opts)
 
 -- TABS
 -- new tab with same cursor position
-map("n", "<leader>at", "mm:tabnew %<CR>`m:delm m<CR>", {desc = '[tab] [n]ew'})
+-- map("n", "<leader>at", "mm:tabnew %<CR>`m:delm m<CR>", {desc = '[tab] [n]ew'})
 -- moving between tabs
-map("n", "<leader>an", ":tabn<CR>", {desc = '[n]next tab'})
-map("n", "<leader>ap", ":tabp<CR>", {desc = '[p]rev tab'})
+-- map("n", "<leader>an", ":tabn<CR>", {desc = '[n]next tab'})
+-- map("n", "<leader>ap", ":tabp<CR>", {desc = '[p]rev tab'})
 
 
 -- SPLITS
