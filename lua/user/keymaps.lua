@@ -45,7 +45,7 @@ pcall(require('telescope').load_extension, 'fzf')
 
 
 -- LAZYGIT
-vim.keymap.set("n", "<leader>lg", [[:LazyGit<CR>]], {desc = '[l]azy[g]it'})
+vim.keymap.set("n", "<leader>l", [[:LazyGit<CR>]], {desc = '[l]azy[g]it'})
 vim.g.lazygit_floating_window_scaling_factor = 1
 
 
