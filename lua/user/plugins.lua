@@ -189,7 +189,7 @@ return {
       }
     end,
   },
-  -- this line is in .zshrc:
+  -- needs this line is in .zshrc:
   -- source "$HOME/.openai_key.zsh"
   -- and obvs need that file
 
