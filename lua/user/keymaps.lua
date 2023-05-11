@@ -8,18 +8,16 @@ local map = vim.keymap.set
 --          Plugin Keymaps          -----------------
 -----------------------------------------------------
 
-
-
 -- BUFFERS
-map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev buffer" })
-map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+-- buffer-line plugin
+-- map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev buffer" })
+-- map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+-- map("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "[q]uit buffer" })
+
+-- vanilla buffers
 -- map("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Prev buffer" })
 -- map("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
-
-map("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "[q]uit buffer" })
-
-
-
+-- map("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "[q]uit buffer" })
 
 
 -- LUASNIP
@@ -80,10 +78,10 @@ vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {desc = '[p]roject [f]orma
 map("n", "<leader>e", vim.cmd.Ex, { desc = ':[e]x' })
 
 
--- SAVING, EXITING
+-- SAVING
+-- quitting is with tabs or buffers
 map("n", "<C-s>", ":wa<CR>", opts)
 map("n", "<leader>w", ":w<CR>", {desc ='[w]rite'}, opts)
--- map("n", "<leader>q", ":q!<CR>", {desc = '[q]uit'})
 
 
 -- SEARCH
@@ -130,10 +128,14 @@ map("n", "Y", "y$", opts)
 
 -- TABS
 -- new tab with same cursor position
--- map("n", "<leader>at", "mm:tabnew %<CR>`m:delm m<CR>", {desc = '[tab] [n]ew'})
+map("n", "<leader>at", "mm:tabnew %<CR>`m:delm m<CR>", {desc = '[tab] [n]ew'})
 -- moving between tabs
 -- map("n", "<leader>an", ":tabn<CR>", {desc = '[n]next tab'})
 -- map("n", "<leader>ap", ":tabp<CR>", {desc = '[p]rev tab'})
+map("n", "<S-l>", ":tabn<CR>", {desc = '[n]next tab'})
+map("n", "<S-h>", ":tabp<CR>", {desc = '[p]rev tab'})
+-- quitting windows / tabs
+map("n", "<leader>q", ":q!<CR>", {desc = '[q]uit'})
 
 
 -- SPLITS

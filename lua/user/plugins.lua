@@ -23,14 +23,14 @@ return {
 
 
   -- Bufferline
-  {
-    'akinsho/bufferline.nvim',
-    version = "*",
-    dependencies = 'kyazdani42/nvim-web-devicons',
-    config = function()
-      require('bufferline').setup()
-    end,
-  },
+  -- {
+  --   'akinsho/bufferline.nvim',
+  --   version = "*",
+  --   dependencies = 'kyazdani42/nvim-web-devicons',
+  --   config = function()
+  --     require('bufferline').setup()
+  --   end,
+  -- },
 
 
 
