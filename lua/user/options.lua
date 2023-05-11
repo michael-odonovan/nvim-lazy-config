@@ -56,7 +56,7 @@ opt.whichwrap:append {
 
 -- Numbers
 vim.wo.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 
 
 -- Mouse
