@@ -145,7 +145,7 @@ map("n", "<leader>av", ":vsp<CR><C-w>l", {desc = '[v]ertical split'})
 -- MY NOTES / WIKI MAPPINGS
 map("n", "<leader>tb", "0i- [ ] ", {desc = '[t]ick [b]ox'} )
 map("n", "<leader>td", "^wlrX<Esc>", {desc = '[t]odo [d]one'})
-map("n", "<leader>tu", "^fXr ", {desc = '[t]odo [u]ndone'})
+map("n", "<leader>tu", "^wlr <Esc>", {desc = '[t]odo [u]ndone'})
 
 
 -- MOVE TO CURRENT WORKING DIRECTORY
