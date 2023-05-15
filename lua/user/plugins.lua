@@ -175,9 +175,6 @@ return {
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
-    dependencies = {
-      'JoosepAlviste/nvim-ts-context-commentstring',
-    },
 
     build = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
@@ -206,10 +203,6 @@ return {
 
           additional_vim_regex_highlighting = false,
 
-        },
-
-        context_commentstring = {
-          enable = true,
         },
 
       }
