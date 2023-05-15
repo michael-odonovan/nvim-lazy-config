@@ -7,30 +7,18 @@ return {
   --          NEW                        --
   -----------------------------------------
 
-  { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
-
   -- Undo Tree
   'mbbill/undotree',
 
 
-  -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function() require("nvim-surround").setup() end
+  },
 
-  -- {
-  --   'akinsho/toggleterm.nvim',
-  --   config = function() require('toggleterm').setup() end
-  -- },
 
-
-  -- Bufferline
-  -- {
-  --   'akinsho/bufferline.nvim',
-  --   version = "*",
-  --   dependencies = 'kyazdani42/nvim-web-devicons',
-  --   config = function()
-  --     require('bufferline').setup()
-  --   end,
-  -- },
 
 
 
@@ -143,16 +131,6 @@ return {
     config = function() require('Comment').setup() end
   },
 
-  -- Surround
-  {
-    'kylechui/nvim-surround',
-    tag = '*',
-    config = function() require('nvim-surround').setup() end
-  },
-
-  -- Repeat Surround
-  { 'tpope/vim-repeat', event = 'VeryLazy' },
-
   -- Emmet =>  <C-y>,  real quick
   'mattn/emmet-vim',
 
@@ -197,32 +175,18 @@ return {
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+    },
+
     build = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
+
     config = function()
       require('nvim-treesitter.configs').setup {
         ensure_installed = {
-          'json',
-          'query',
-          'tsx',
-          'yaml',
-          'c',
-          'html',
-          'javascript',
-          'lua',
-          'cpp',
-          'go',
-          'lua',
-          'python',
-          'rust',
-          'typescript',
-          'vimdoc',
-          'vim',
-          'regex',
-          'bash',
-          'css',
-          'scss',
+          'json', 'query', 'tsx', 'yaml', 'c', 'html', 'javascript', 'lua', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'vim', 'regex', 'bash', 'css', 'scss',
         },
 
         -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -241,7 +205,13 @@ return {
           disable = { "markdown" },
 
           additional_vim_regex_highlighting = false,
+
         },
+
+        context_commentstring = {
+          enable = true,
+        },
+
       }
     end
   },
