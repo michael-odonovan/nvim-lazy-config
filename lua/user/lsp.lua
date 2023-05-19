@@ -12,8 +12,7 @@ lsp.ensure_installed({
   'cssls',
   'html',
   'bashls',
-  'pyright',
-  'eslint'
+  'pyright'
 })
 
 -- Fix Undefined global 'vim'
