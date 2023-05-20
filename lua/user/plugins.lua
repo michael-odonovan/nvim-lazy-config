@@ -58,6 +58,9 @@ return {
   -- Harpoon
   'theprimeagen/harpoon',
 
+  -- Marks
+  'chentoast/marks.nvim',
+
 
   -- Which-Key
   {
