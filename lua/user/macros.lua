@@ -1,5 +1,5 @@
 
--- Macros
+-- MACROS
 vim.cmd([[
 " Notice the <Esc> etc. have to be escaped with \
 

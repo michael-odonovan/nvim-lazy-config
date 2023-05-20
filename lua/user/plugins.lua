@@ -4,27 +4,17 @@
 return {
 
   -----------------------------------------
-  --          NEW                        --
+  ---------------- NEW --------------------
   -----------------------------------------
 
   -- Undo Tree
   'mbbill/undotree',
 
 
-  {
-    "kylechui/nvim-surround",
-    version = "*",
-    event = "VeryLazy",
-    config = function() require("nvim-surround").setup() end
-  },
-
-
-
-
 
 
   -----------------------------------------
-  --          STABLE                     --
+  -------------- STABLE -------------------
   -----------------------------------------
 
   -- Colorschemes
@@ -119,6 +109,13 @@ return {
 
 
   -- IMPROVED TEXT EDITING
+  -- Surrounding
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function() require("nvim-surround").setup() end
+  },
   -- Autopairs
   {
     'windwp/nvim-autopairs',
