@@ -11,6 +11,18 @@ return {
   'mbbill/undotree',
 
 
+  -- TODO
+  -- HACK
+  -- WARN
+  -- PERF
+  -- NOTE
+  -- TEST
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {}
+  },
+
 
 
   -----------------------------------------
