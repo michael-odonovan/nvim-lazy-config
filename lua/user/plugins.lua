@@ -161,7 +161,6 @@ return {
 
   'lukas-reineke/indent-blankline.nvim',
 
-
   'davidgranstrom/nvim-markdown-preview',
 
 
