@@ -83,9 +83,9 @@ vim.wo.signcolumn = 'yes'
 
 
 -- Update Time
-opt.updatetime = 250
-opt.timeout = true
-opt.timeoutlen = 300
+opt.updatetime = 100
+-- opt.timeout = true
+-- opt.timeoutlen = 300
 
 
 -- Completeopt

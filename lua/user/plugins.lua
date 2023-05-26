@@ -139,10 +139,22 @@ return {
     config = function() require('nvim-autopairs').setup() end
   },
 
-  -- Comment
+  -- Comments
   {
     'numToStr/Comment.nvim',
-    config = function() require('Comment').setup() end
+    config = function()
+      -- this makes it work with the jsx comment plugin
+      require('Comment').setup {
+        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+      }
+    end
+  },
+  -- sorts jsx comments
+  {
+    'nvim-treesitter/nvim-treesitter',
+    dependencies = {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+    },
   },
 
   -- Emmet =>  <C-y>,  real quick
@@ -205,6 +217,10 @@ return {
         -- Automatically install missing parsers when entering buffer
         -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
         auto_install = false,
+
+        context_commentstring = {
+          enable = true,
+        },
 
         highlight = {
           enable = true,
