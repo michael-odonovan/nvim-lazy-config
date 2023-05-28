@@ -114,6 +114,13 @@
     ],
     "description": "arrow function"
   },
+  "import css-modules": {
+    "prefix": "icss",
+    "body": [
+      "import styles from './$1.module.css';"
+    ],
+    "description": "import css-modules"
+  },
   "css-modules": {
     "prefix": "css-modules",
     "body": [
