@@ -128,6 +128,13 @@
     ],
     "description": "css-modules"
   },
+  "create react class": {
+    "prefix": "cn",
+    "body": [
+      "className=$1"
+    ],
+    "description": "create react class"
+  },
   "className": {
     "prefix": "className",
     "body": [
