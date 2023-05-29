@@ -161,13 +161,6 @@
     ],
     "description": ""
   },
-  "Import Component": {
-    "prefix": "ic",
-    "body": [
-      "import ${1} from '${2}';"
-    ],
-    "description": "import component from within project"
-  },
   "Import Styled Components": {
     "prefix": "isc",
     "body": [

@@ -6,6 +6,13 @@
     ],
     "description": "border red"
   },
+  "hover active focus": {
+    "prefix": "haf",
+    "body": [
+      ".$1:hover, .$1:active, .$1:focus "
+    ],
+    "description": "hover active focus"
+  },
   "flex": {
     "prefix": "flex",
     "body": [
