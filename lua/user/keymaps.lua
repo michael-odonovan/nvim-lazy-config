@@ -61,7 +61,7 @@ map("n", "<leader>he", require("harpoon.ui").toggle_quick_menu, { desc = '[h]arp
 
 
 -- NEURAL AI
-vim.keymap.set("n", "<leader>n", [[:Neural ]], {desc = '[n]eural'})
+vim.keymap.set("n", "<leader>n", [[:Neural ]], {desc = '[n]eural'}, opts)
 
 
 
@@ -69,6 +69,10 @@ vim.keymap.set("n", "<leader>n", [[:Neural ]], {desc = '[n]eural'})
 ------------------------------------------------------
 ----------------- General Keymaps --------------------
 ------------------------------------------------------
+
+-- NUMBERS
+vim.keymap.set("n", "<leader>r", ":set rnu!<CR>", {desc = '[r]elative numbers'}, opts)
+
 
 -- FORMATTING
 vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {desc = '[p]roject [f]ormat'})

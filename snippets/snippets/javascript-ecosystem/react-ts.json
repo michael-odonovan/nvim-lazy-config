@@ -168,6 +168,13 @@
     ],
     "description": "import styled"
   },
+  "@ts-ignore": {
+    "prefix": "tsi",
+    "body": [
+      "@ts-ignore"
+    ],
+    "description": "@ts-ignore"
+  },
   "Import useState": {
     "prefix": "ius",
     "body": [

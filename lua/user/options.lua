@@ -49,6 +49,7 @@ opt.whichwrap:append {
 -- Numbers
 vim.wo.number = true
 opt.relativenumber = true
+opt.signcolumn = "number"
 
 
 -- Mouse
