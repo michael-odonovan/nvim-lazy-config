@@ -29,6 +29,13 @@
     ],
     "description": ".filter()"
   },
+  "console.log": {
+    "prefix": "cl",
+    "body": [
+      "console.log(${1});"
+    ],
+    "description": "console.log"
+  },
   "switch": {
     "prefix": "switch",
     "body": [
