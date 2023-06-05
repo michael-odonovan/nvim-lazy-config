@@ -99,7 +99,7 @@
       "  )",
       "}",
       "",
-      "export default ${1}"
+      "export default $TM_FILENAME_BASE"
     ],
     "description": "React default arrow function"
   },
