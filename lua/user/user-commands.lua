@@ -13,4 +13,3 @@ vim.api.nvim_create_user_command('Sav', 'cd %:p:h | sav <args>', { nargs = 1 })
 vim.api.nvim_create_user_command('New', 'cd %:p:h | e <args>', { nargs = 1 })
 
 return M
-
