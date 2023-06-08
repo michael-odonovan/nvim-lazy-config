@@ -61,6 +61,8 @@ return {
               ['<C-n>'] = require('telescope.actions').cycle_history_next,
             },
           },
+          layout_strategy = 'vertical',
+          layout_config = { height = 0.99, width = 0.99 }
         },
       }
     end,
