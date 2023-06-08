@@ -124,7 +124,7 @@
   "css-modules": {
     "prefix": "css-modules",
     "body": [
-      "className={styles.$1} "
+      "className={styles.$1}"
     ],
     "description": "css-modules"
   },
