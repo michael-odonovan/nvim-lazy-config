@@ -62,7 +62,7 @@ return {
             },
           },
           layout_strategy = 'vertical',
-          layout_config = { height = 0.99, width = 0.99 }
+          layout_config = { height = 0.999, width = 0.999 }
         },
       }
     end,
