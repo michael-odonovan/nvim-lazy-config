@@ -77,4 +77,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+vim.api.nvim_create_autocmd("CmdlineLeave", {
+	callback = function()
+		vim.fn.timer_start(5000, function()
+			print(" ")
+		end)
+	end
+})
+
 return M
