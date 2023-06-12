@@ -46,7 +46,6 @@ return {
   'tpope/vim-rhubarb', -- :GBrowse
   'kdheepak/lazygit.nvim',
 
-
   -- Telescope
   {
     'nvim-telescope/telescope.nvim',
@@ -165,6 +164,8 @@ return {
   -- Indent Group Selecting
   'michaeljsmith/vim-indent-object',
 
+  -- Lorem Ipsum generating
+  'derektata/lorem.nvim',
 
   -- Trouble
   {
