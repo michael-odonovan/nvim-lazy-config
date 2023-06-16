@@ -19,6 +19,9 @@ local map = vim.keymap.set
 -- map("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 -- map("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "[q]uit buffer" })
 
+-- CLOSE-BUFFER
+-- Delete all non-visible buffers
+map("n", "<leader>bd", "<cmd>lua require('close_buffers').delete({ type = 'hidden', force = true }) <CR>", { desc = '[b]uffer [d]elete hidden'})
 
 -- LUASNIP
 map("i", "<C-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
