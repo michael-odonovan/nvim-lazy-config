@@ -167,6 +167,17 @@ return {
   -- Lorem Ipsum generating
   'derektata/lorem.nvim',
 
+  -- deleting buffers
+  'kazhala/close-buffers.nvim',
+  -- :BDelete! hidden
+  -- :BDelete nameless
+  -- :BDelete this
+  -- :BDelete 1
+  -- :BDelete regex='.*[.].md'
+  -- :BWipeout! all
+  -- :BWipeout other
+  -- :BWipeout hidden glob=*.lua
+
   -- Trouble
   {
     'folke/trouble.nvim',
