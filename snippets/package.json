@@ -64,7 +64,9 @@
           "javascript",
           "javascriptreact",
           "typescriptreact",
-          "typescript"
+          "typescript",
+          "html",
+          "css"
         ],
         "path": "./snippets/javascript-ecosystem/comments.json"
       },
