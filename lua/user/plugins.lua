@@ -167,10 +167,6 @@ return {
   -- Lorem Ipsum generating
   'derektata/lorem.nvim',
 
-  -- deleting buffers
-  -- <leader>bd
-  'kazhala/close-buffers.nvim',
-
   -- Trouble
   {
     'folke/trouble.nvim',

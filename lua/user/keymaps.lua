@@ -8,20 +8,12 @@ local map = vim.keymap.set
 ----------------- PLUGIN KEYMAPS --------------------
 -----------------------------------------------------
 
--- BUFFERS
--- buffer-line plugin
--- map("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Prev buffer" })
--- map("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
--- map("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "[q]uit buffer" })
+map('n', '<leader>bd', ':up | %bd | e#<CR>', { desc = '[b]uffer [d]elete hidden'})
 
--- vanilla buffers
--- map("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Prev buffer" })
--- map("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
--- map("n", "<leader>q", "<cmd>bdelete<CR>", { desc = "[q]uit buffer" })
 
--- CLOSE-BUFFER
--- Delete all non-visible buffers
-map("n", "<leader>bd", "<cmd>lua require('close_buffers').delete({ type = 'hidden', force = true }) <CR>", { desc = '[b]uffer [d]elete hidden'})
+-- TROUBLE
+map('n', '<leader>tr', ':TroubleToggle<CR>', {desc = '[tr]ouble'})
+
 
 -- LUASNIP
 map("i", "<C-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
@@ -52,10 +44,6 @@ vim.g.lazygit_floating_window_scaling_factor = 1
 
 -- UNDOTREE
 map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = '[u]ndotree'})
-
-
--- TROUBLE
-map("n", "<leader>tr", ":TroubleToggle<CR>", {desc = '[tr]ouble'})
 
 
 -- HARPOON
