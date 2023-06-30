@@ -18,4 +18,6 @@ vim.api.nvim_create_user_command('Scratch', 'edit ~/Desktop/scratch.md', {})
 
 vim.api.nvim_create_user_command('Path', "put =expand('%:p')", {})
 
+vim.api.nvim_create_user_command('Desk', 'edit ~/Desktop/', {})
+
 return M

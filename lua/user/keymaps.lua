@@ -8,7 +8,7 @@ local map = vim.keymap.set
 ----------------- PLUGIN KEYMAPS --------------------
 -----------------------------------------------------
 
-map('n', '<leader>bd', ':up | %bd | e#<CR>', { desc = '[b]uffer [d]elete hidden'})
+map('n', '<leader>bd', "<cmd>lua require('close_buffers').delete({ type = 'hidden', force = true }) <CR>", { desc = '[b]uffer [d]elete hidden'})
 
 
 -- TROUBLE
