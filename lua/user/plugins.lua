@@ -24,7 +24,6 @@ return {
   },
 
 
-
   -----------------------------------------
   -------------- STABLE -------------------
   -----------------------------------------
@@ -195,6 +194,7 @@ return {
   'stefandtw/quickfix-reflector.vim',
 
   -- Trouble
+  -- <leader>tr
   {
     'folke/trouble.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
