@@ -47,8 +47,8 @@ map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = '[u]ndotree'})
 
 
 -- HARPOON
-map("n", "<leader>ha", require('harpoon.mark').add_file, { desc = '[h]arpoon [a]dd file'})
-map("n", "<leader>he", require("harpoon.ui").toggle_quick_menu, { desc = '[h]arpoon [e]xplorer'})
+-- map("n", "<leader>ha", require('harpoon.mark').add_file, { desc = '[h]arpoon [a]dd file'})
+-- map("n", "<leader>he", require("harpoon.ui").toggle_quick_menu, { desc = '[h]arpoon [e]xplorer'})
 
 
 -- NEURAL AI

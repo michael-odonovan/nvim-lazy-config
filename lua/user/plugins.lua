@@ -67,8 +67,8 @@ return {
   },
 
 
-  -- Harpoon
-  'theprimeagen/harpoon',
+  -- -- Harpoon
+  -- 'theprimeagen/harpoon',
 
   -- Marks
   {
