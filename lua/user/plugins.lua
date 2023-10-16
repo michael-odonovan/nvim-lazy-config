@@ -67,8 +67,8 @@ return {
   },
 
 
-  -- -- Harpoon
-  -- 'theprimeagen/harpoon',
+  -- Harpoon
+  'theprimeagen/harpoon',
 
   -- Marks
   {
@@ -157,6 +157,7 @@ return {
     },
   },
 
+  -- smooth scrolling
   {
     "karb94/neoscroll.nvim",
     event = "WinScrolled",
@@ -200,12 +201,34 @@ return {
     dependencies = 'kyazdani42/nvim-web-devicons',
   },
 
+  -- indent guides
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {
+        indent = {
+        char = "│",
+        tab_char = "│",
+      },
+      scope = { enabled = false },
+      exclude = {
+        filetypes = {
+          "help",
+          "alpha",
+          "dashboard",
+          "neo-tree",
+          "Trouble",
+          "lazy",
+          "mason",
+          "notify",
+          "toggleterm",
+          "lazyterm",
+        },
+      }
+    }
+  },
 
-  'lukas-reineke/indent-blankline.nvim',
-
+  -- markdown preview
   'davidgranstrom/nvim-markdown-preview',
 
-
+  -- icons
   'kyazdani42/nvim-web-devicons',
 
 
