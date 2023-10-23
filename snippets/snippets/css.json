@@ -6,6 +6,20 @@
     ],
     "description": "border red"
   },
+  "border black": {
+    "prefix": "bb",
+    "body": [
+      "border: 1px solid black;"
+    ],
+    "description": "border black"
+  },
+  "border white": {
+    "prefix": "bw",
+    "body": [
+      "border: 1px solid white;"
+    ],
+    "description": "border white"
+  },
   "hover active focus": {
     "prefix": "haf",
     "body": [
@@ -16,9 +30,9 @@
   "flex": {
     "prefix": "flex",
     "body": [
-      "display: flex;",
-      "justify-content: center;",
-      "align-items: center;"
+      "  display: flex;",
+      "  justify-content: center;",
+      "  align-items: center;"
     ],
     "description": "flex"
   },
@@ -128,6 +142,20 @@
       "}"
     ],
     "description": "grid with areas"
+  },
+  "justify-content": {
+    "prefix": "justify content",
+    "body": [
+      "justify-content: center"
+    ],
+    "description": "justify content"
+  },
+  "align-items": {
+    "prefix": "align-items",
+    "body": [
+      "align-items: center;"
+    ],
+    "description": "align-items"
   },
   "background image": {
     "prefix": "background-image",
