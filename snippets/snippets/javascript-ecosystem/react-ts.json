@@ -37,7 +37,7 @@
   "import useState/useEffect": {
     "prefix": "ir",
     "body": [
-      "import { ${1} } from 'react'"
+      "import React from 'react';"
     ],
     "description": "import useState/useEffect"
   },
