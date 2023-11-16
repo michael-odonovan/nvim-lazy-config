@@ -28,7 +28,7 @@
   "useEffect Hook": {
     "prefix": "ue",
     "body": [
-      "useEffect(() => {",
+      "React.useEffect(() => {",
       "  ${2}",
       "}, [${1}]);"
     ],

@@ -20,6 +20,14 @@
     ],
     "description": ".map()"
   },
+  "eslint stuff": {
+    "prefix": "esl",
+    "body": [
+      "/* eslint-disable */",
+      "/* eslint-disable-next-line */"
+    ],
+    "description": "eslint stuff"
+  },
   ".filter()": {
     "prefix": "filter",
     "body": [
