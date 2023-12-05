@@ -51,6 +51,16 @@
     "description": "gallery grid"
   },
   "robots": {
+    "prefix": "img",
+    "body": [
+      "<img",
+      "  alt=\"${1}\"",
+      "  src=\"${2}\"",
+      "img/>"
+    ],
+    "description": "img"
+  },
+  "robots": {
     "prefix": "robots",
     "body": [
       "User-agent: Googlebot-Image",
