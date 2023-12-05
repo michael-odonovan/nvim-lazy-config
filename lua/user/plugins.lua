@@ -191,7 +191,10 @@ return {
   -- <leader>bd
   'kazhala/close-buffers.nvim',
 
-  -- edit quickfix window
+  -- edit quickfix window => search and replace plugin
+  -- :vimgrep searchExample *
+  -- :copen
+  -- use :%s/... and then :w
   'stefandtw/quickfix-reflector.vim',
 
   -- Trouble
