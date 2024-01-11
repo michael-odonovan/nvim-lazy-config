@@ -127,7 +127,7 @@ return {
 
   -- IMPROVED TEXT EDITING
   -- Surrounding
-  -- ys$"
+  -- ys$" => make rest of line into quotes
   {
     "kylechui/nvim-surround",
     version = "*",
