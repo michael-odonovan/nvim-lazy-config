@@ -127,6 +127,7 @@ return {
 
   -- IMPROVED TEXT EDITING
   -- Surrounding
+  -- ys$"
   {
     "kylechui/nvim-surround",
     version = "*",
