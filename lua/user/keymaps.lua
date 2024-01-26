@@ -108,6 +108,10 @@ map({"n", "v"}, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
 
 
+-- YANK CURRENT PATH
+map('n', '<leader>y', [[:lua vim.fn.setreg('+', vim.fn.expand('%:p'))<CR>]], { noremap = true, silent = true })
+
+
 -- VISUAL LINE MOVEMENT
 map("n", "j", "gj", opts)
 map("n", "k", "gk", opts)
