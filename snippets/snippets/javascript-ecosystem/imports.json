@@ -23,6 +23,15 @@
     ],
     "description": "import styled"
   },
+
+  "Import Proptypes": {
+    "prefix": "ipr",
+    "body": [
+      "import PropTypes from 'prop-types';"
+    ],
+    "description": "import Proptypes"
+  },
+
   "Import useState": {
     "prefix": "ius",
     "body": [
