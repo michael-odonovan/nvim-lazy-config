@@ -2,6 +2,8 @@
   "React Functional Component": {
     "prefix": "rfc",
     "body": [
+      "import React from 'react';",
+      "",
       "export default function ${TM_FILENAME_BASE/(^\\w*)|(-)/${1:/pascalcase}${2:+ }/g}(${2}) {",
       "  ${3}",
       "  return (",
@@ -56,6 +58,13 @@
       "</>"
     ],
     "description": "fragment"
+  },
+  "theme": {
+    "prefix": "theme",
+    "body": [
+      "background: ${({ theme }) => theme.color('white')};"
+    ],
+    "description": "theme"
   },
   "switch": {
     "prefix": "rrd",
