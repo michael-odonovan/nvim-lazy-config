@@ -128,6 +128,7 @@ return {
   -- IMPROVED TEXT EDITING
   -- Surrounding
   -- ys$" => make rest of line into quotes
+  -- v j3 St p => surrounding multi lines with <p>
   {
     "kylechui/nvim-surround",
     version = "*",
