@@ -25,7 +25,7 @@
   },
 
   "Import Proptypes": {
-    "prefix": "ipr",
+    "prefix": "pt",
     "body": [
       "import PropTypes from 'prop-types';",
       "${TM_FILENAME_BASE/(^\\w*)|(-)/${1:/pascalcase}${2:+ }/g}.propTypes = {",
