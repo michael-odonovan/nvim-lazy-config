@@ -7,13 +7,12 @@ function my_statusline()
     branch = '  '..branch
   end
 
-  return branch..' %f%m% %= %10([%l/%L%)]'
+  return branch..' %f%m% %= %10([%l/%L:%c%)]'
 end
 
 vim.cmd[[ set statusline=%!luaeval('my_statusline()') ]]
 
 return M
-
 
 
 
