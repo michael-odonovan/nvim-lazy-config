@@ -15,6 +15,8 @@ vim.api.nvim_create_user_command('Sav', 'cd %:p:h | sav <args>', { nargs = 1 })
 vim.api.nvim_create_user_command('Notes', 'edit ~/repos/notes/', {})
 
 vim.api.nvim_create_user_command('Scratch', 'edit ~/Desktop/scratch.md', {})
+vim.api.nvim_create_user_command('Scratch2', 'edit ~/Desktop/scratch2.md', {})
+
 
 vim.api.nvim_create_user_command('Path', "put =expand('%:p')", {})
 

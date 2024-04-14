@@ -46,6 +46,14 @@ return {
   'kdheepak/lazygit.nvim',
 
   -- Telescope
+  -- search and replace:
+  -- copy text or...
+  -- copy line => Y (must use this)
+  -- leader sf
+  -- apple v
+  -- ctrl q
+  -- do search and replace with %s/...
+  -- save
   {
     'nvim-telescope/telescope.nvim',
     version = '*',
