@@ -17,6 +17,7 @@ vim.api.nvim_create_user_command('Notes', 'edit ~/repos/notes/', {})
 vim.api.nvim_create_user_command('Scratch', 'edit ~/Desktop/scratch.md', {})
 vim.api.nvim_create_user_command('Scratch2', 'edit ~/Desktop/scratch2.md', {})
 
+vim.api.nvim_create_user_command('Work', 'edit ~/Desktop/work-notes.md', {})
 
 vim.api.nvim_create_user_command('Path', "put =expand('%:p')", {})
 
