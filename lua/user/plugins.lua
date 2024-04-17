@@ -68,7 +68,8 @@ return {
             },
           },
           layout_strategy = 'vertical',
-          layout_config = { height = 0.999, width = 0.999 }
+          layout_config = { height = 0.999, width = 0.999 },
+          smart_case = false, -- Make search case-sensitive
         },
       }
     end,
