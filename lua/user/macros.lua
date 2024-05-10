@@ -9,6 +9,6 @@ let @i="0f;i !important\<esc>"
 let @s="viw\"pygg}O\<cr>const \<esc>\"ppa = styled.div`\<esc>A;\<esc>hi\<cr>\<esc>i  "
 
 " create <Component/> after using Cy
-let @c="bi<ea />"
+let @c="0^i<ea />"
 
 ]])
