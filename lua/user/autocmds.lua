@@ -85,4 +85,10 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
 	end
 })
 
+vim.api.nvim_create_autocmd("Root", {
+  callback = function()
+    vim.cmd "cd `git rev-parse --show-toplevel`"
+  end,
+})
+
 return M
