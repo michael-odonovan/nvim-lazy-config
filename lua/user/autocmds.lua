@@ -85,6 +85,11 @@ vim.api.nvim_create_autocmd("CmdlineLeave", {
 	end
 })
 
+vim.api.nvim_create_user_command('WordCount', function()
+  local words = vim.fn.wordcount().words
+  print("Word count: " .. words)
+end, {})
+
 -- vim.api.nvim_create_autocmd("Root", {
 --   callback = function()
 --     vim.cmd "cd `git rev-parse --show-toplevel`"

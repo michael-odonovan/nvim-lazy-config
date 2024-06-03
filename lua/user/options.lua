@@ -48,7 +48,7 @@ opt.whichwrap:append {
 
 -- Numbers
 vim.wo.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.signcolumn = "number"
 
 

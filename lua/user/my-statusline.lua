@@ -7,6 +7,9 @@ function my_statusline()
     branch = '  '..branch
   end
 
+  -- Get the word count
+  local word_count = vim.fn.wordcount().words
+
   return branch..' %f%m% %= %10([%l/%L:%c%)]'
 end
 
