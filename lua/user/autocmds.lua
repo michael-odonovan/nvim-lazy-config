@@ -18,6 +18,15 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
   pattern = "*",
   command = [[%s/\s\+$//e]],
 })
+-- except markdown files
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*",
+--   callback = function()
+--     if vim.bo.filetype ~= 'markdown' then
+--       vim.cmd([[%s/\s\+$//e]])
+--     end
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = {
