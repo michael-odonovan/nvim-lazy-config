@@ -130,5 +130,4 @@ vim.g.markdown_fenced_languages = {
 	"tsx=typescript.tsx",
 }
 
-
 return M
