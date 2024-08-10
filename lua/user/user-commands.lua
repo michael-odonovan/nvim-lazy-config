@@ -27,4 +27,6 @@ vim.api.nvim_create_user_command('Todo', 'edit ~/repos/planning/1.today-todo.md'
 
 vim.api.nvim_create_user_command('Dig', 'edit ~/repos/planning/3.digital-standup.md', {})
 
+vim.api.nvim_create_user_command('Storage', 'edit ~/repos/notes/storage/', {})
+
 return M
