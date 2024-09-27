@@ -85,6 +85,7 @@ map("n", "<leader>w", ":w<CR>", {desc ='[w]rite'}, opts)
 -- SEARCH
 map("n", "<leader>f", [[:%s/]], {desc = '[f]ind replace'})
 map("n", "<leader>F", [[:,$s/]], {desc = '[F]ind replace from cursor'})
+map("n", "<leader>x", [[/\<]], {desc = '[x]act word'})
 
 
 -- SHIFTING BLOCKS OF TEXT
