@@ -194,7 +194,7 @@
     "prefix": "@media",
     "body": [
       "@media (min-width: 800px) {",
-      "@media ${({ theme }) => theme.breakpoint('small')} {",
+      "@media ${({ theme }) => theme.allBreakpoints('M')} {",
       "  ${1}",
       "}",
       ""
