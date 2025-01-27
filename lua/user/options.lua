@@ -23,9 +23,8 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 -- fixes gx open files functionality in netrw
--- vim.g.netrw_browsex_viewer="open"
-vim.g.netrw_browsex_viewer = "/usr/bin/open"
-
+vim.g.netrw_browsex_viewer="open"
+-- vim.g.netrw_browsex_viewer = "/usr/bin/open"
 
 -- Indents
 opt.tabstop = 2

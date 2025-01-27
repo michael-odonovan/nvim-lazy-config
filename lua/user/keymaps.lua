@@ -74,6 +74,22 @@ vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {desc = '[p]roject [f]orma
 
 -- NETRW
 map("n", "<leader>e", vim.cmd.Ex, { desc = ':[e]x' })
+-- vim.keymap.set('n', 'gx', function()
+--   local file = vim.fn.expand("%:p:h") .. "/" .. vim.fn.expand("<cfile>")
+--   vim.fn.system("/usr/bin/open " .. vim.fn.shellescape(file))
+-- end)
+vim.keymap.set('n', 'gx', function()
+  local cfile = vim.fn.expand("<cfile>")
+  local full_path = vim.fn.expand("%:p:h") .. "/" .. cfile
+
+  -- Check if it looks like a URL
+  if cfile:match("^https?://") then
+    vim.fn.system("open " .. vim.fn.shellescape(cfile))
+  else
+    -- Assume it's a local file
+    vim.fn.system("/usr/bin/open " .. vim.fn.shellescape(full_path))
+  end
+end)
 
 
 -- SAVING
