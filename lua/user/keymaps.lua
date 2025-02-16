@@ -73,23 +73,80 @@ vim.keymap.set("n", "<leader>pf", vim.lsp.buf.format, {desc = '[p]roject [f]orma
 
 
 -- NETRW
+-- open netrw shortcut
 map("n", "<leader>e", vim.cmd.Ex, { desc = ':[e]x' })
--- vim.keymap.set('n', 'gx', function()
---   local file = vim.fn.expand("%:p:h") .. "/" .. vim.fn.expand("<cfile>")
---   vim.fn.system("/usr/bin/open " .. vim.fn.shellescape(file))
--- end)
-vim.keymap.set('n', 'gx', function()
-  local cfile = vim.fn.expand("<cfile>")
-  local full_path = vim.fn.expand("%:p:h") .. "/" .. cfile
 
-  -- Check if it looks like a URL
-  if cfile:match("^https?://") then
-    vim.fn.system("open " .. vim.fn.shellescape(cfile))
-  else
-    -- Assume it's a local file
-    vim.fn.system("/usr/bin/open " .. vim.fn.shellescape(full_path))
+
+-- OPENING IMAGES AND LINKS WITH GX COMMAND
+
+-- Older Function that works for:
+-- opening markdown links
+-- opening netrw images
+-- vim.keymap.set('n', 'gx', function()
+--   local cfile = vim.fn.expand("<cfile>")
+--   local full_path = vim.fn.expand("%:p:h") .. "/" .. cfile
+--
+--   -- Check if it looks like a URL
+--   if cfile:match("^https?://") then
+--     vim.fn.system("open " .. vim.fn.shellescape(cfile))
+--   else
+--     -- Assume it's a local file
+--     vim.fn.system("/usr/bin/open " .. vim.fn.shellescape(full_path))
+--   end
+-- end)
+
+-- Newer Function that works for:
+-- opening markdown links
+-- opening markdown images
+-- opening netrw images
+function _G.smart_open()
+  local cfile = vim.fn.expand('<cfile>')
+  local line = vim.fn.getline('.')
+
+  -- Special handling for netrw
+  if vim.bo.filetype == 'netrw' then
+    -- Get the current directory in netrw
+    local dir = vim.b.netrw_curdir or vim.fn.getcwd()
+    -- Combine with the filename under cursor
+    local full_path = dir .. '/' .. cfile
+
+    -- Check if the file exists
+    if vim.fn.filereadable(full_path) == 1 then
+      vim.fn.jobstart({'open', full_path})
+      return
+    elseif vim.fn.isdirectory(full_path) == 1 then
+      -- Let netrw handle directories
+      vim.cmd.normal {'g', 'x', bang = true}
+      return
+    end
   end
-end)
+
+  -- Check if it's a URL
+  if cfile:match('^https?://') then
+    vim.fn.jobstart({'open', cfile})
+    return
+  end
+
+  -- Check if cfile is a readable file
+  if vim.fn.filereadable(cfile) == 1 then
+    vim.fn.jobstart({'open', cfile})
+    return
+  end
+
+  -- Look for a full file path in the current line
+  local path = line:match('(/[^%s]+%.%w+)')
+  if path and vim.fn.filereadable(path) == 1 then
+    vim.fn.jobstart({'open', path})
+    return
+  end
+
+  -- Fall back to default gx behavior
+  vim.cmd.normal {'g', 'x', bang = true}
+end
+
+-- Map gx to our custom function above
+vim.api.nvim_set_keymap('n', 'gx', ':lua smart_open()<CR>', {noremap = true, silent = true})
+
 
 
 -- SAVING
