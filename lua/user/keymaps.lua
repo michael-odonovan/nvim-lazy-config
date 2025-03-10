@@ -40,11 +40,6 @@ map('n', '<leader>sd', builtin.diagnostics, { desc = '[d]iagnostic search' })
 pcall(require('telescope').load_extension, 'fzf')
 
 
--- LAZYGIT
-vim.keymap.set("n", "<leader>lg", [[:LazyGit<CR>]], {desc = '[l]azy[g]it'})
-vim.g.lazygit_floating_window_scaling_factor = 1
-
-
 -- UNDOTREE
 map("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = '[u]ndotree'})
 

@@ -23,6 +23,49 @@ vim.api.nvim_create_user_command('Work', 'edit ~/Desktop/work-notes.md', {})
 
 vim.api.nvim_create_user_command('Pwd', "put =expand('%:p')", {})
 
+-- Auto-add title to new markdown files
+vim.api.nvim_create_autocmd({"BufNewFile"}, {
+  pattern = {"*.md"},
+  callback = function()
+    -- Get the file name without path and extension
+    local filename = vim.fn.expand('%:t:r')
+    -- Replace hyphens with spaces
+    local without_hyphens = filename:gsub('%-', ' ')
+    -- Title case function
+    local function title_case(str)
+      return str:gsub("(%a)([%w_']*)", function(first, rest)
+        return first:upper() .. rest:lower()
+      end)
+    end
+    -- Apply title casing and add markdown heading syntax
+    local title = "# " .. title_case(without_hyphens)
+    -- Put the result in the buffer
+    vim.api.nvim_put({title, ""}, 'l', true, true)
+  end
+})
+
+-- Manually create title based on Markdwon file name
+vim.api.nvim_create_user_command('Title', function()
+  -- Get the file name without path and extension
+  local filename = vim.fn.expand('%:t:r')
+
+  -- Replace hyphens with spaces
+  local without_hyphens = filename:gsub('%-', ' ')
+
+  -- Title case function
+  local function title_case(str)
+    return str:gsub("(%a)([%w_']*)", function(first, rest)
+      return first:upper() .. rest:lower()
+    end)
+  end
+
+  -- Apply title casing and add markdown heading syntax
+  local title = "# " .. title_case(without_hyphens)
+
+  -- Put the result in the buffer
+  vim.api.nvim_put({title}, 'l', true, true)
+end, {})
+
 vim.api.nvim_create_user_command('Desk', 'edit ~/Desktop/', {})
 
 vim.api.nvim_create_user_command('Todo', 'edit ~/repos/notes/planning/1.today-todo.md', {})

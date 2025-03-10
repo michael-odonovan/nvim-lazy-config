@@ -40,16 +40,15 @@ return {
   -- },
 
 
-  -- Git
+  -- Git :GBrowse
   'tpope/vim-fugitive',
-  'tpope/vim-rhubarb', -- :GBrowse
-  'kdheepak/lazygit.nvim',
+  'tpope/vim-rhubarb',
 
   -- Telescope
   -- search and replace:
   -- copy text or...
   -- copy line => Y (must use this)
-  -- leader sf
+  -- <leader>sf
   -- apple v
   -- ctrl q
   -- do search and replace with %s/...
@@ -75,7 +74,7 @@ return {
     end,
   },
 
-  -- Harpoon
+  -- Harpoon: <leader>h
   'theprimeagen/harpoon',
 
   -- Marks
@@ -188,7 +187,7 @@ return {
     end
   },
 
-  -- Emmet =>  <C-y>,  real quick
+  -- Emmet: <C-y>, real quick
   'mattn/emmet-vim',
 
   -- Indent Group Selecting
@@ -197,8 +196,7 @@ return {
   -- Lorem Ipsum generating
   'derektata/lorem.nvim',
 
-  -- deleting buffers
-  -- <leader>bd
+  -- deleting buffers: <leader>bd
   'kazhala/close-buffers.nvim',
 
   -- edit quickfix window => search and replace plugin
@@ -207,8 +205,7 @@ return {
   -- use :%s/... and then :w
   'stefandtw/quickfix-reflector.vim',
 
-  -- Trouble
-  -- <leader>tr
+  -- Trouble (errors): <leader>tr
   {
     'folke/trouble.nvim',
     dependencies = 'kyazdani42/nvim-web-devicons',
