@@ -76,9 +76,6 @@ vim.api.nvim_create_user_command('GitBranch', function()
     branch = "Not a git repository"
   end
 
-  -- Optionally format the branch name (uncomment if needed)
-  -- local formatted_branch = "Branch: " .. branch
-
   -- Put the result in the buffer at the current cursor position
   vim.api.nvim_put({branch}, 'l', true, true)
 end, {})
