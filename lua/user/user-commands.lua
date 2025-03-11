@@ -66,6 +66,23 @@ vim.api.nvim_create_user_command('Title', function()
   vim.api.nvim_put({title}, 'l', true, true)
 end, {})
 
+-- Paste the current Git branch name into the buffer
+vim.api.nvim_create_user_command('GitBranch', function()
+  -- Get the current Git branch name using system command
+  local branch = vim.fn.system("git branch --show-current 2>/dev/null"):gsub("\n", "")
+
+  -- Handle the case where we're not in a git repository
+  if branch == "" or branch:match("fatal") then
+    branch = "Not a git repository"
+  end
+
+  -- Optionally format the branch name (uncomment if needed)
+  -- local formatted_branch = "Branch: " .. branch
+
+  -- Put the result in the buffer at the current cursor position
+  vim.api.nvim_put({branch}, 'l', true, true)
+end, {})
+
 vim.api.nvim_create_user_command('Desk', 'edit ~/Desktop/', {})
 
 vim.api.nvim_create_user_command('Todo', 'edit ~/repos/notes/planning/1.today-todo.md', {})
