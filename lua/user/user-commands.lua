@@ -5,7 +5,11 @@ local M = {}
 -- vim.cmd.Test()
 
 vim.api.nvim_create_user_command('Tickets', 'edit ~/repos/notes/planning/tickets.md', {})
+
+vim.api.nvim_create_user_command('Playwright', 'edit ~/repos/notes/coding/playwright-learning.md', {})
+
 vim.api.nvim_create_user_command('Errors', 'edit ~/Desktop/errors.md', {})
+
 vim.api.nvim_create_user_command('Tmux', 'edit ~/.tmux.conf', {})
 
 -- using arguments in a string / user command
