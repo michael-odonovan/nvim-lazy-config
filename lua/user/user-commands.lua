@@ -4,7 +4,7 @@ local M = {}
 -- vim.api.nvim_create_user_command('Test', 'echo "It works!"', {})
 -- vim.cmd.Test()
 
-vim.api.nvim_create_user_command('Tickets', 'edit ~/Desktop/tickets.md', {})
+vim.api.nvim_create_user_command('Tickets', 'edit ~/repos/notes/planning/tickets.md', {})
 vim.api.nvim_create_user_command('Errors', 'edit ~/Desktop/errors.md', {})
 vim.api.nvim_create_user_command('Tmux', 'edit ~/.tmux.conf', {})
 
