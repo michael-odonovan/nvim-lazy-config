@@ -187,7 +187,9 @@ return {
     end
   },
 
-  -- Emmet: <C-y>, real quick
+  -- turn a word into a tag:
+  -- move to end of word
+  -- <C-y>, real quick
   'mattn/emmet-vim',
 
   -- Indent Group Selecting
