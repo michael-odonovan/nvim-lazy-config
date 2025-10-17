@@ -105,9 +105,6 @@ return {
             z = false,
           },
         },
-        motions = {
-          count = false,
-        },
         show_help = false, -- show a help message
         show_keys = false, -- show the currently pressed key
       }
@@ -276,16 +273,8 @@ return {
           'json', 'query', 'tsx', 'yaml', 'c', 'html', 'javascript', 'lua', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'vim', 'regex', 'bash', 'css', 'scss',
         },
 
-        -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = false,
-
-        -- Automatically install missing parsers when entering buffer
-        -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
         auto_install = false,
-
-        context_commentstring = {
-          enable = true,
-        },
 
         highlight = {
           enable = true,
@@ -307,7 +296,7 @@ return {
   -- Lsp-Zero and Luasnip
   {
     'VonHeikemen/lsp-zero.nvim',
-    branch = 'v1.x',
+    branch = 'v4.x',
     dependencies = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' },             -- Required
@@ -339,4 +328,10 @@ return {
     }
   },
 
+  {
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    config = function()
+      require('ts_context_commentstring').setup({})
+    end
+  },
 }

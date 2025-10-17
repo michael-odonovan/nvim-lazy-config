@@ -1,6 +1,8 @@
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+vim.g.lspconfig_deprecation_warnings = false
+vim.g.skip_ts_context_commentstring_module = true
 
 -- lazy package manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
