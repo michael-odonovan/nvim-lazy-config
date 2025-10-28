@@ -15,7 +15,9 @@ map('n', '<leader>bp', ':bprevious<cr>', { desc = '[b]uffer [p]revious' })
 map('n', '<leader>bd', "<cmd>lua require('close_buffers').delete({ type = 'hidden', force = true }) <CR>", { desc = '[b]uffer [d]elete hidden'})
 
 -- TROUBLE
-map('n', '<leader>tr', ':TroubleToggle<CR>', {desc = '[tr]ouble'})
+-- map('n', '<leader>tr', ':TroubleToggle<CR>', {desc = '[tr]ouble'})
+-- map('n', '<leader>tr', '<cmd>Trouble diagnostics toggle<CR>', {desc = '[tr]ouble'})
+map('n', '<leader>tr', '<cmd>Trouble diagnostics toggle<cr>', {desc = '[tr]ouble'})
 
 
 -- LUASNIP
