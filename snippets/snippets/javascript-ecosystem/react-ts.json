@@ -211,5 +211,23 @@
       "import Image from 'next/image';"
     ],
     "description": "import Image"
+  },
+  "guide red": {
+    "prefix": "guide red",
+    "body": [
+      "{/* guide */}",
+      "<div style={{ border: \"1px solid red\"}}>",
+      "</div>"
+    ],
+    "description": "guide red"
+  },
+  "guide green": {
+    "prefix": "guide green",
+    "body": [
+      "{/* guide */}",
+      "<div style={{ border: \"1px solid green\"}}>",
+      "</div>"
+    ],
+    "description": "guide green"
   }
 }

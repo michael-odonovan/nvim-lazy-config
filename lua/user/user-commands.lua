@@ -4,7 +4,7 @@ local M = {}
 -- vim.api.nvim_create_user_command('Test', 'echo "It works!"', {})
 -- vim.cmd.Test()
 
-vim.api.nvim_create_user_command('Tickets', 'edit ~/repos/notes/planning/tickets.md', {})
+vim.api.nvim_create_user_command('Tickets', 'edit ~/repos/A-General/notes/planning/tickets.md', {})
 
 vim.api.nvim_create_user_command('Playwright', 'edit ~/repos/notes/coding/playwright-learning.md', {})
 
@@ -20,10 +20,12 @@ vim.api.nvim_create_user_command('Notes', 'edit ~/repos/notes/', {})
 
 vim.api.nvim_create_user_command('Car', 'edit ~/repos/notes/car/', {})
 
-vim.api.nvim_create_user_command('Scratch', 'edit ~/Desktop/scratch.md', {})
-vim.api.nvim_create_user_command('ScratchJs', 'edit ~/Desktop/scratch.js', {})
-
-vim.api.nvim_create_user_command('Work', 'edit ~/Desktop/work-notes.md', {})
+vim.api.nvim_create_user_command('Scratch', 'edit ~/Desktop/scratch/scratch.md', {})
+vim.api.nvim_create_user_command('Scratch2', 'edit ~/Desktop/scratch/scratch2.md', {})
+vim.api.nvim_create_user_command('Scratch3', 'edit ~/Desktop/scratch/scratch3.md', {})
+vim.api.nvim_create_user_command('ScratchJs', 'edit ~/Desktop/scratch/scratch.js', {})
+vim.api.nvim_create_user_command('ScratchJs2', 'edit ~/Desktop/scratch/scratch2.js', {})
+vim.api.nvim_create_user_command('ScratchJs3', 'edit ~/Desktop/scratch/scratch3.js', {})
 
 vim.api.nvim_create_user_command('Pwd', "put =expand('%:p')", {})
 

@@ -190,6 +190,22 @@
     ],
     "description": "img wrapper"
   },
+  "guide red": {
+    "prefix": "guide red",
+    "body": [
+      "// guide",
+      "border: 1px solid red;"
+    ],
+    "description": "guide red"
+  },
+  "guide green": {
+    "prefix": "guide green",
+    "body": [
+      "// guide",
+      "border: 1px solid green;"
+    ],
+    "description": "guide green"
+  },
   "media query": {
     "prefix": "@media",
     "body": [

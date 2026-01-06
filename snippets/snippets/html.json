@@ -50,13 +50,22 @@
     ],
     "description": "gallery grid"
   },
-  "robots": {
+  "image": {
     "prefix": "img",
     "body": [
       "<img",
       "  alt=\"${1}\"",
       "  src=\"${2}\"",
       "img/>"
+    ],
+    "description": "img"
+  },
+  "guide": {
+    "prefix": "guide",
+    "body": [
+      "{/* guide */}",
+      "<div style={{ border: \"1px solid green\"}}>",
+      "</div>"
     ],
     "description": "img"
   },

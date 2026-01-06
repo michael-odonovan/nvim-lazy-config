@@ -7,9 +7,6 @@ return {
   ---------------- NEW --------------------
   -----------------------------------------
 
-  -- Undo Tree
-  'mbbill/undotree',
-
 
   -- TODO
   -- HACK
@@ -198,10 +195,10 @@ return {
   -- deleting buffers: <leader>bd
   'kazhala/close-buffers.nvim',
 
-  -- edit quickfix window => search and replace plugin
-  -- :vimgrep searchExample *
-  -- :copen
-  -- use :%s/... and then :w
+  -- edit quickfix window => search and replace plugin bulk words
+  -- use Telescope to find the word to replace
+  -- control / q => add to quickfix list
+  -- use :%s/... to change word, and then :w
   'stefandtw/quickfix-reflector.vim',
 
   -- Trouble (errors): <leader>tr

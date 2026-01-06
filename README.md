@@ -1,10 +1,10 @@
 # my simple Neovim config using Lazy plugin manager
 
-## other good good configs I am using for ideas:
-https://github.com/LazyVim/LazyVim
+## quickfix-reflector / edit quickfix window / global search and replace
+- use Telescope to find the word to replace
+- control / q => add to quickfix list
+- use :%s/... to change word, and then :w
 
-https://github.com/NvChad/NvChad
-
-https://github.com/Oyinbra/nvim-config
-
-https://github.com/Integralist/nvim
+## nvim-surround
+### Surrounding with <p> HTML / Jsx tags:
+v j3 St p
