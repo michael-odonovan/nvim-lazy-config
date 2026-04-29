@@ -92,8 +92,6 @@ vim.api.nvim_create_user_command('Todo', 'edit ~/Desktop/planning/1.today-todo.m
 
 vim.api.nvim_create_user_command('Dig', 'edit ~/Desktop/planning/3.digital-standup.md', {})
 
-/Users/mike4031/Desktop/planning/3.digital-standup.md
-
 vim.api.nvim_create_user_command('Diy', 'edit ~/repos/notes/diy/', {})
 
 vim.api.nvim_create_user_command('Storage', 'edit ~/repos/storage/', {})
