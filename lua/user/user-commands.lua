@@ -88,9 +88,11 @@ end, {})
 
 vim.api.nvim_create_user_command('Desk', 'edit ~/Desktop/', {})
 
-vim.api.nvim_create_user_command('Todo', 'edit ~/repos/notes/planning/1.today-todo.md', {})
+vim.api.nvim_create_user_command('Todo', 'edit ~/Desktop/planning/1.today-todo.md', {})
 
-vim.api.nvim_create_user_command('Dig', 'edit ~/repos/notes/planning/3.digital-standup.md', {})
+vim.api.nvim_create_user_command('Dig', 'edit ~/Desktop/planning/3.digital-standup.md', {})
+
+/Users/mike4031/Desktop/planning/3.digital-standup.md
 
 vim.api.nvim_create_user_command('Diy', 'edit ~/repos/notes/diy/', {})
 

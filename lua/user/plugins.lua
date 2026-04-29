@@ -263,8 +263,17 @@ return {
     }
   },
 
-  -- markdown preview
-  'davidgranstrom/nvim-markdown-preview',
+-- markdown preview
+{
+  "iamcco/markdown-preview.nvim",
+  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  build = "cd app && yarn install",
+  init = function()
+    vim.g.mkdp_filetypes = { "markdown" }
+    vim.g.mkdp_theme = "light"
+  end,
+  ft = { "markdown" },
+},
 
   -- icons
   'kyazdani42/nvim-web-devicons',
